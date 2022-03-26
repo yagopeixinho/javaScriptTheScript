@@ -10,7 +10,7 @@
 
 <br>
 
-# o que é JavaScript? 
+# o que é JavaScript?  
 
 o JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e de multiparadigma. foi introduzido em 1995, criada originalmente para funcionar do lado do usuário - nos navegadores. O JavaScript é bastante popular e é uma das principais tecnologias da _world wide web_ atualmente, permitindo a criação de páginas interativas com elementos dinâmicos e uma boa interface.
 
