@@ -9,7 +9,7 @@
 
 > javaScript é uma linguagem de programação criada por Brendan Eich, a pedido da empresa Netscape, em meados de 1950, inicialmente com o nome _Live Script_
 
-<br>
+<br> 
 
 # o que é JavaScript?
 
