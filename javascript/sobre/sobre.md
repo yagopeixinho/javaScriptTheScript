@@ -21,7 +21,7 @@ o JavaScript é uma linguagem de programação interpretada estruturada, de scri
 <br>
 <br>
 
-# 
+---
 
 <div class="footer">
     <table align="center">
