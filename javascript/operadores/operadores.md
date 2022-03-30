@@ -20,7 +20,7 @@
 - [operadores de comparação](#operadores-de-comparação)
 - [operadores aritméticos](#operadores-aritméticos)
 - operadores bit a bit
-- operadores lógicos
+- [operadores lógicos](#operadores-lógicos)
 - operadores de string
 - operador condicional (ternário)
 - operador vírgula
@@ -52,8 +52,6 @@ um operador de atribuição atribui um valor ao operando à sua esquerda baseado
 | atribuição OR bit-a-bit                                    | x \|= y            | x = x \| y   |
 
 <br>
-<br>
-<br>
 
 # operadores de comparação
 
@@ -72,8 +70,6 @@ um operador de comparação compara seus operandos e retorna um valor lógico _t
 | menor que (<)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                         | var1 < var2<br> "12" < "2"         |
 | menor que ou igual (<=)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                   | var1 <= var2<br> var2 <= 5         |
 
-<br>
-<br>
 <br>
 
 # operadores aritméticos
@@ -107,6 +103,68 @@ para complementar às operações aritméticas padrões ( +, -, \*, / ), o JavaS
 
 <br>
 
+# operadores lógicos
+
+operadores lógicos são utilizados tipicamente com valores booleanos (lógicos);
+
+| operador         | utilização       | descrição                                                                                                                                                                                                                                           |
+| ---------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AND lógico (&&)  | expr1 && expr2   | (E lógico) - Retorna expr1 caso possa ser convertido para falso; senão, retorna expr2. Assim, quando utilizado com valores booleanos, && retorna verdadeiro caso ambos operandos sejam verdadeiros; caso contrário, retorna falso.                  |
+| OU lógico (\|\|) | expr1 \|\| expr2 | (OU lógico) - Retorna expr1 caso possa ser convertido para verdadeiro; senão, retorna expr2. Assim, quando utilizado com valores booleanos, \|\| retorna verdadeiro caso ambos os operandos sejam verdadeiro; se ambos forem falsos, retorna falso. |
+| NOT lógico (!)   | !expr            | (Negação lógica) Retorna falso caso o único operando possa ser convertido para verdadeiro; senão, retorna verdadeiro.                                                                                                                               |
+
+outro exemplo de valores que podem ser considerados como **falso** são aqueles valores que são avaliados como _nulo, 0, string vazia ("") ou undefined_.
+
+<br>
+
+## exemplos práticos
+
+##### exemplos retirados do [mnd web docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)
+
+---
+
+#### o código a seguir mostra exemplos do operador && (E lógico).
+
+```javascript
+var a1 = true && true; // t && t retorna true
+var a2 = true && false; // t && f retorna false
+var a3 = false && true; // f && t retorna false
+var a4 = false && 3 == 4; // f && f retorna false
+var a5 = "Gato" && "Cão"; // t && t retorna Cão
+var a6 = false && "Gato"; // f && t retorna false
+var a7 = "Gato" && false; // t && f retorna false
+```
+
+#### o código a seguir mostra exemplos do operador || (OU lógico).
+
+```javascript
+var o1 = true || true; // t || t retorna true
+var o2 = false || true; // f || t retorna true
+var o3 = true || false; // t || f retorna true
+var o4 = false || 3 == 4; // f || f retorna false
+var o5 = "Gato" || "Cão"; // t || t retorna Gato
+var o6 = false || "Gato"; // f || t retorna Gato
+var o7 = "Gato" || false; // t || f retorna Gato
+```
+
+#### o código a seguir mostra exemplos do operador ! (negação lógica).
+
+```javascript
+var n1 = !true; // !t retorna false
+var n2 = !false; // !f retorna true
+var n3 = !"Gato"; // !t retorna false
+```
+<br>
+
+# avaliação curto-circuito
+
+as expressão lógicas são testadas pelo valor iniciado da esquerda para a direita. Desse modo, é possível fazer um teste chamado "curto-circuito", utilizando as seguintes regras:
+> - false && qualquercoisa é avaliado em curto-circuito como falso.
+> - true || qualquercoisa é avaliado em curto-circuito como verdadeiro.
+
+desse modo é possível verificarmos se as regras da lógica avaliada estão corretas, pois, reperando que a parte "qualquercoisa" das expressões acima não são avaliadas de forma que qualquer nova lógica implementada após não produzirá efeito nenhum.
+
+<br>
 <br>
 <br>
 
