@@ -69,9 +69,8 @@ um operador de comparação compara seus operandos e retorna um valor lógico _t
 | estritamente não igual (!==) | retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                 | var1 !== "3"<br> 3 !== '3'         |
 | maior que (>)                | retorna verdadeiro caso o operando da esquerda seja maior que o da direita.                                         | var2 > var1<br> "12" > 2           |
 | maior que ou igual (>=)      | retorna verdadeiro caso o operando da esquerda seja maior ou igual ao da direita.                                   | var2 >= var1<br> var1 >= 3         |
-| menor que (<)                | retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                         | var1 < var2<br> "12" < "2"         |
-| menor que ou igual (<=)      | retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                   | var1 <= var2<br> var2 <= 5         |
-|                              |                                                                                                                     |                                    |
+| menor que (<)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                         | var1 < var2<br> "12" < "2"         |
+| menor que ou igual (<=)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                   | var1 <= var2<br> var2 <= 5         |
 
 <br>
 <br>
