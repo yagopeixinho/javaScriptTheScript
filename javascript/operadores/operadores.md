@@ -21,10 +21,10 @@
 - [operadores aritméticos](#operadores-aritméticos)
 - operadores bit a bit
 - [operadores lógicos](#operadores-lógicos)
-- operadores de string
-- operador condicional (ternário)
+- [operadores de string](#operadores-de-string)
+- [operador ternário (condicional)](#operador-ternário)
 - operador vírgula
-- operador unário
+- [operador unário](#operador-urinário)
 - operadores relacionais
 
 <br>
@@ -154,15 +154,92 @@ var n1 = !true; // !t retorna false
 var n2 = !false; // !f retorna true
 var n3 = !"Gato"; // !t retorna false
 ```
+
 <br>
 
 # avaliação curto-circuito
 
 as expressão lógicas são testadas pelo valor iniciado da esquerda para a direita. Desse modo, é possível fazer um teste chamado "curto-circuito", utilizando as seguintes regras:
+
 > - false && qualquercoisa é avaliado em curto-circuito como falso.
 > - true || qualquercoisa é avaliado em curto-circuito como verdadeiro.
 
 desse modo é possível verificarmos se as regras da lógica avaliada estão corretas, pois, reperando que a parte "qualquercoisa" das expressões acima não são avaliadas de forma que qualquer nova lógica implementada após não produzirá efeito nenhum.
+
+<br>
+
+# operadores de string
+
+além dos operadores de comparação, que podem ser utilizados em valores tring, o operador de _concatenação_ (+) concatena dois valores string, retornando outra string que é a união dos dois operandos.
+
+exemplos:
+
+```javascript
+console.log("minha " + "string"); // retorna a mensagem "minha string"
+```
+
+```javascript
+var inicial = "mundo";
+console.log("olá " + inicial); // vai ser imprimido no console a mensagem "olá mundo"
+```
+
+existe também um operador de atribuição encurtado += que pode ser utilizado para concatenar strings.
+
+```javascript
+var minhaString = "alfa";
+minhaString += "beto"; // vai ser guardado na variável minhaString o valor "alfabeto"
+```
+
+## template string
+
+como visto acima que para concatenarmos uma string precisamos utilizar o sinal (+) e estaremos juntando uma string. Entretanto, é fortemente recomendado um outro método conhecido por _template string_, que funciona da seguinte forma:
+
+```javascript
+const nome = "yago peixinho";
+console.log(`meu nome é ${nome}`);
+```
+
+é nítido que dessa forma a nossa string se torna mais clara. Vamos ver detalhadamente o que aconteceu...
+
+```javascript
+const nome = "yago peixinho"; // aqui é declarado o valor do tipo Char em uma constante que possui o valor "yago peixinho"
+
+console.log(
+  `meu nome é ${nome}`
+); /* utilizamos o acento grave (``) para determinarmos até aonde a nossa string vai.
+exemplo: (`o texto em string vai aqui dentro`).
+
+Para informarmos que queremos que o valor de alguma variável seja considerada, utilizamos o sinal do dólar ($) e cercamos a variável com chaves ({}).
+No exemplo é dado ${nome} - levando em conta que o valor dentro da variável será o valor a ser considerado. 
+
+Dessa forma será imprimido no console: meu nome é yago peixinho
+
+*/
+```
+
+<br>
+
+# operador ternário
+
+o ternário condicional é o único operador JavaScript que utiliza três operandos. O operador pode ter um de dois valores baseados em uma condição. A sintaxe é:
+
+```javascript
+var nomeVariavel = condicao ? valor1 : valor2;
+```
+
+basicamente estamos informando que se a _condicao_ for verdadeira, a variável _nomeVariavel_ receberá o _valor1_, se for falsa, receberá o _valor2_.
+
+```javascript
+var status = idade >= 18 ? "adulto" : "menor de idade";
+console.log(nomeVariavel); // será imprimido no console: "é verdadeiro", pois a condição é verdadeira, logo o valor obtido é "é verdadeiro"
+```
+
+esta declaração atribui o valor "adulto" à variável status caso idade seja dezoito ou mais. Caso contrário, atribui o valor "menor de idade".
+
+<br>
+
+# operadores unário
+
 
 <br>
 <br>
