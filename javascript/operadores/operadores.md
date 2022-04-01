@@ -24,7 +24,7 @@
 - [operadores de string](#operadores-de-string)
 - [operador ternário (condicional)](#operador-ternário)
 - operador vírgula
-- [operador unário](#operador-urinário)
+- [operador unário](#operador-unário)
 - operadores relacionais
 
 <br>
@@ -229,16 +229,29 @@ var nomeVariavel = condicao ? valor1 : valor2;
 
 basicamente estamos informando que se a _condicao_ for verdadeira, a variável _nomeVariavel_ receberá o _valor1_, se for falsa, receberá o _valor2_.
 
-```javascript
+~~~javascript
 var status = idade >= 18 ? "adulto" : "menor de idade";
 console.log(nomeVariavel); // será imprimido no console: "é verdadeiro", pois a condição é verdadeira, logo o valor obtido é "é verdadeiro"
-```
+~~~
 
 esta declaração atribui o valor "adulto" à variável status caso idade seja dezoito ou mais. Caso contrário, atribui o valor "menor de idade".
 
 <br>
 
-# operadores unário
+# operador unário
+o operador unário é uma operação realizada apenas com um operando. Por exemplo, o operador *delete* apaga um objeto, uma propriedade do objeto ou um determinado elemento em alguma posição específica de uma matriz.
+
+~~~javascript
+delete nomeObjeto;
+delete nomeObjeto.propriedade;
+delete nomeObjeto[indice];
+~~~
+
+**nomeObjeto** é o nome de um objeto... __propriedade__ é uma propriedade existente no objeto e __índice__ é um inteiro que representa a localização de um elemento na matriz. Você pode usar o operador __delete__ para deletar variáveis implicitamente mas não aquelas declaradas com __var__. 
+
+Caso o operador __delete__ seja bem-sucedido, ele defina a propriedade ou elemento para __undefined__. O operador __delete__ retorna verdadeiro se a operação foi possível e retorna falso caso a operação não for possível.
+
+`x = 12 ==`
 
 
 <br>
