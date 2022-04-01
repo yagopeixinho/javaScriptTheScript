@@ -16,16 +16,25 @@
 
 ### o JavaScript possui todos os tipos de operadores a seguir:
 
+- [operadores em JavaScript](#operadores-em-javascript)
+    - [o JavaScript possui todos os tipos de operadores a seguir:](#o-javascript-possui-todos-os-tipos-de-operadores-a-seguir)
 - [operadores de atribuição](#operadores-de-atribuição)
 - [operadores de comparação](#operadores-de-comparação)
 - [operadores aritméticos](#operadores-aritméticos)
-- operadores bit a bit
 - [operadores lógicos](#operadores-lógicos)
+  - [exemplos práticos](#exemplos-práticos)
+        - [exemplos retirados do mnd web docs](#exemplos-retirados-do-mnd-web-docs)
+      - [o código a seguir mostra exemplos do operador && (E lógico).](#o-código-a-seguir-mostra-exemplos-do-operador--e-lógico)
+      - [o código a seguir mostra exemplos do operador || (OU lógico).](#o-código-a-seguir-mostra-exemplos-do-operador--ou-lógico)
+      - [o código a seguir mostra exemplos do operador ! (negação lógica).](#o-código-a-seguir-mostra-exemplos-do-operador--negação-lógica)
+- [avaliação curto-circuito](#avaliação-curto-circuito)
 - [operadores de string](#operadores-de-string)
-- [operador ternário (condicional)](#operador-ternário)
-- operador vírgula
+  - [template string](#template-string)
+- [operador ternário](#operador-ternário)
 - [operador unário](#operador-unário)
-- operadores relacionais
+        - [exemplos retirados do mnd web docs](#exemplos-retirados-do-mnd-web-docs-1)
+  - [apagando elementosdo array](#apagando-elementosdo-array)
+      - [referências desse documento](#referências-desse-documento)
 
 <br>
 
@@ -247,11 +256,38 @@ delete nomeObjeto.propriedade;
 delete nomeObjeto[indice];
 ~~~
 
-**nomeObjeto** é o nome de um objeto... __propriedade__ é uma propriedade existente no objeto e __índice__ é um inteiro que representa a localização de um elemento na matriz. Você pode usar o operador __delete__ para deletar variáveis implicitamente mas não aquelas declaradas com __var__. 
+`nomeObjeto` é o nome de um objeto... `propriedade` é uma propriedade existente no objeto e `índice` é um inteiro que representa a localização de um elemento na matriz. Você pode usar o operador `delete` para deletar variáveis declaradas implícitamente, mas não aquelas declaradas com `var`. Um exemplo de declaração implícita é `nomeVariavel = 12`, pois não utilizamos o nome reservado *var*; é importante ressaltar também que variáveis declaradas de forma explícita são consideradas variáveis globais.
 
-Caso o operador __delete__ seja bem-sucedido, ele defina a propriedade ou elemento para __undefined__. O operador __delete__ retorna verdadeiro se a operação foi possível e retorna falso caso a operação não for possível.
+Caso o operador `delete` seja bem-sucedido, ele defina a propriedade ou elemento para `undefined`. O operador `delete` retorna verdadeiro se a operação foi possível e retorna falso caso a operação não for possível.
 
-`x = 12 ==`
+##### exemplos retirados do [mnd web docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)
+
+~~~javascript
+x = 42; 
+var y = 43;
+
+delete x; // retorna true, pois pode ser apagado por ter sido declarada implicitamente
+delete y; // retorna false, pois não pode ser apagada por ter sido declarada implicitamente
+~~~
+
+~~~javascript 
+meuObj = new Number();
+meuObj.h = 4; // cria  propriedade h
+
+delete meuObj.h; // retorna true, pois pode apagar as propriedades de um objeto definidas pelo usuário
+delete meuObj; // retorna true pois pode ser apagado por ter sido declarado implicitamente
+~~~
+
+~~~javascript 
+delete Math.PI; // retorna false, pois não é possível apagarmos propriedades predefinidas
+~~~
+
+## apagando elementosdo array
+A princípio é importante ressaltar que quando você apaga um elemento de um array, o tamanho do array não é afetado. Caso você apague o elemento `carros[4]`, o elemento `carros[4]` ainda permanecerá na mesma posição, tornando-se um elemento _undefined_.
+
+
+
+
 
 
 <br>
