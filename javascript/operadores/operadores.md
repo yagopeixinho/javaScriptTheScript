@@ -282,10 +282,32 @@ delete meuObj; // retorna true pois pode ser apagado por ter sido declarado impl
 delete Math.PI; // retorna false, pois não é possível apagarmos propriedades predefinidas
 ~~~
 
-## apagando elementosdo array
-A princípio é importante ressaltar que quando você apaga um elemento de um array, o tamanho do array não é afetado. Caso você apague o elemento `carros[4]`, o elemento `carros[4]` ainda permanecerá na mesma posição, tornando-se um elemento _undefined_.
+## apagando elementos do array
+a princípio é importante ressaltar que quando você apaga um elemento de um array, o tamanho do array não é afetado. Caso você apague o elemento `carros[4]`, o elemento `carros[4]` ainda permanecerá na mesma posição, tornando-se um elemento `undefined`. 
 
+quando é utilizado um `delete` em um elemento do array, aquele elemento é removido imediatamente no array e o valor daquele array que foi deletado é substituído para `undefined` e o valor continua sendo endereçável retornando `undefined` porém qualquer comparação com esse elemento deletado será considerada negativa.
 
+~~~javascript
+var comidasFavoritas = new Array('pizza', 'hamburguer', 'batatas', 'chocolate');
+
+delete comidasFavoritas[3];
+
+if(3 in comidasFavoritas){
+    // isto não será executado
+}
+~~~
+
+caso você queira que o elemento de um array exista mas não quer que ele tenha um valor definido, utilize `undefined` em vez do `delete`. Desse modo o elemento daquela matriz ainda existe, porém com um valor indefinido.
+
+~~~javascript
+var comidasFavoritas = new Array('pizza', 'hamburguer', 'batatas', 'chocolate');
+
+comidasFavoritas[3] = undefined;
+
+if(3 in comidasFavoritas){
+    // isto será executado
+}
+~~~
 
 
 
