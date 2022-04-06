@@ -38,13 +38,43 @@ para números muitos grandes ou pequenos você pode utilziar a notação cientí
 2.9998e8;
 ```
 
-# números especiais
+## números especiais
 
 no JavaScript podemos encontrar três valores especiais que são considerados números mas não se comportam como números normais.
 
 `Infinity` e `-Infinity`, que são valores utilizados para representar os infinitos positivos e negativos, sendo que o cálculo `Infinity - 1` continua sendo `Infinity`, assim como quaisquer variação dessa conta. Portanto, é necessário salientar que não é válido confiarmos em cálculos baseados no valor inifito, pois esse valor não é sólido matematicamente falando e rapidamente nos levará a um número especial: `NaN`.
 
 `NaN` é a abreviação de _"not a number"_, mesmo sendo um valor do tipo número, esse valor é recebido como resultado quando, por exemplo, tentar calcular `0/0` ou `Infinity - Infinity` ou então realizar quaisquer outras operações numéricas que não resultem em um número preciso e significativo.
+
+<br>
+
+# strings
+as Strings são utilizadas para representar textos seu conteúdo é declarado utilizando aspas simples ou duplas, o seu conteúdo vai entre elas; é importante ressaltar que a aspa inicial e final devem ser idênticas, portnato se você iniciou uma string com (`"`), o final da sua `String` deve conter (`"`) também. 
+
+~~~javascript
+"olá, eu sou uma string, prazer em conhecer você!"
+'eu também sou uma string, porém com aspas simples'
+~~~
+
+#### newlines
+
+no JavaScript uma grande parte dos valores podem ser colocados entre aspas de modo em que o JavaScript transformará esse elemento um valor do tipo `String`. Desse modo, imagine que queremos colocar aspas dentro de aspas? De qualquer modo, os caracteres _newlines_ (quebra de linhas quando pressionamos a tecla _Enter_) também não pode ser utilizada dentro de uma `String`.
+> as Strings devem permanecer em linha única!
+
+para que seja possível quebrar a linha de uma string, eis a notação utilizada: 
+
+toda vez que um caraactere de barra invertida `\` for encontrada dentro de uma `String` indica que o caractere seguinte possui uma indicação especial chamada __escapar o caractere__ - uma aspa que se encontra logo após uma barra invertida não indica a finalização da `String` mas que faz parte do texto. O caractere `n` após uma barra invertida é considerado uma quebra de linha e o `t` é considerado um caractere de tabulação
+
+>
+```javascript
+"você está lendo a primeira linha\nE agora voê está lendo a segunda linha"
+```
+
+´´´
+"você está lendo a primeira linha\nE agora voê está lendo a segunda linha"
+
+
+´´´
 
 <br>
 <br>
