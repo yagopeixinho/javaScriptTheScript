@@ -12,6 +12,12 @@
 
 # valores em JavaScript
 
+## sumário
+- [números fracionais](#operadores-em-javascript)
+- [strings](#strings)
+- [booleanos](#valores-booleanos)
+
+
 Existem seis tipos básicos de valores no JavaScript: _números, Strings, Booleanos, objetos, funções e valores indefinidos_. Quando você desejar criar um valor você só precisa invocar o nome do seu valor; É claro que não são criados do nada, todo valor precisa estar armazenado em algum lugar e se você quiser utilizar uma quantidade enorme dele pode acabar ficando sem bits. Porém é importante ressaltar que a medida em que você não utiliza um valor ele será dissipado, fazendo com que seus bits sejam reciclados e disponibilziando-os para serem usados nas contruções de outros valores.
 
 # números
@@ -56,27 +62,22 @@ as Strings são utilizadas para representar textos seu conteúdo é declarado ut
 'eu também sou uma string, porém com aspas simples'
 ~~~
 
-#### newlines
+### newlines
 
 no JavaScript uma grande parte dos valores podem ser colocados entre aspas de modo em que o JavaScript transformará esse elemento um valor do tipo `String`. Desse modo, imagine que queremos colocar aspas dentro de aspas? De qualquer modo, os caracteres _newlines_ (quebra de linhas quando pressionamos a tecla _Enter_) também não pode ser utilizada dentro de uma `String`.
 > as Strings devem permanecer em linha única!
 
 para que seja possível quebrar a linha de uma string, eis a notação utilizada: 
 
-toda vez que um caraactere de barra invertida `\` for encontrada dentro de uma `String` indica que o caractere seguinte possui uma indicação especial chamada __escapar o caractere__ - uma aspa que se encontra logo após uma barra invertida não indica a finalização da `String` mas que faz parte do texto. O caractere `n` após uma barra invertida é considerado uma quebra de linha e o `t` é considerado um caractere de tabulação
-
->
-```javascript
-"você está lendo a primeira linha\nE agora voê está lendo a segunda linha"
-```
-
-´´´
-"você está lendo a primeira linha\nE agora voê está lendo a segunda linha"
-
-
-´´´
+toda vez que um caraactere de barra invertida `\` for encontrada dentro de uma `String` indica que o caractere seguinte possui uma indicação especial chamada __escapar o caractere__ - uma aspa que se encontra logo após uma barra invertida não indica a finalização da `String` mas que faz parte do texto. O caractere `n` após uma barra invertida é considerado uma quebra de linha e o `t` é considerado um caractere de tabulação: `"você está lendo a primeira linha\nE agora você está lendo a segunda linha"`.
 
 <br>
+
+
+# valores booleanos
+na programação, frequentemente precisamos utilizar um valor que possa nos ajudar a dinstringuir entre duas possibilidades
+ 
+
 <br>
 <br>
 
