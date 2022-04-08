@@ -76,7 +76,33 @@ toda vez que um caraactere de barra invertida `\` for encontrada dentro de uma `
 
 # valores booleanos
 na programação, frequentemente precisamos utilizar um valor que possa nos ajudar a dinstringuir entre duas possibilidades
- 
+
+## comparações
+essa é uma maneira de produzir valores booleanos:
+~~~javascript
+console.log(3 > 2)
+// -> true
+
+console.log(3 < 2)
+// -> false
+~~~
+
+geralmente os valores de comparações resultam em algum resultado `true` ou `false`.
+
+> no JavaScript existe apenas um valor que não é igual a ele mesmo, que é o valor NaN, que significa "not a number", que em português significa "não é um número".
+~~~javascript
+console.log(NaN == NaN)
+~~~
+> `NaN` é utilizado como retorno indicativo de que o resultado de alguma operação que não tenha sentido.
+
+<br>
+<br>
+
+# valores indefinidos
+no JavaScript é muito comum nos depararmos com os valores `null` e `undefined`. O valor `undefined` é geralmente utilizado quando uma variável não possui nenhum valor, o `null` é utilizado quando queremos intencionalmente definir que existe a ausência de quaqluer valor em determinada variável.
+
+
+
 
 <br>
 <br>
