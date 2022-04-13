@@ -13,19 +13,24 @@
 # estrutura do programa
 
 ## sumário
+
 - [expressões e afirmações](#expressões-e-afirmações)
 - [ponto e vírgula](#ponto-e-vírgula)
 - [variáveis](#variáveis)
 - [palavra-chaves e palavras reservadas](#palavras-chave-e-palavras-reservadas)
+- [funções](#funções)
+- [fluxo de controle](#fluxo-de-controle)
+- [extrutura de repetição](#estrutura-de-repetição)
 
-a estrutura do programa é um dos pontos mais importantes. Iremos expandir nosso domínio da linguagem para que possamos expressar algo mais significativo. É importante salientar que a estrutura de um programa é a sequência de funções (módulos) que em conjunto irão permitir resolver o problema proposto. 
+a estrutura do programa é um dos pontos mais importantes. Iremos expandir nosso domínio da linguagem para que possamos expressar algo mais significativo. É importante salientar que a estrutura de um programa é a sequência de funções (módulos) que em conjunto irão permitir resolver o problema proposto.
 
 <br>
 
 # expressões e afirmações
-um fragmento de código que produz um valor é chamado de __expressão__. Os valores são escritos de forma literal como `22` ou `"uma string"` é uma expressão. Uma expressão em parênteses também é considerado uma expressão, bem como operadores binários aplicados a duas expressõues ou um unário aplicado a uma.
 
-basicamente uma __expressão__ consiste em qualquer unidade válida de código que é resolvida como um valor. 
+um fragmento de código que produz um valor é chamado de **expressão**. Os valores são escritos de forma literal como `22` ou `"uma string"` é uma expressão. Uma expressão em parênteses também é considerado uma expressão, bem como operadores binários aplicados a duas expressõues ou um unário aplicado a uma.
+
+basicamente uma **expressão** consiste em qualquer unidade válida de código que é resolvida como um valor.
 
 > é importante ressaltar que existem dois tipos de expressões, aquelas que atribuem um valor a uma variável e aquelas que possuem um valor.
 >
@@ -34,9 +39,10 @@ basicamente uma __expressão__ consiste em qualquer unidade válida de código q
 > `21 + 12` é um exemplol do tipo de expressão que possui um valor. É importante ressaltar que está operação utiliza o operador `+` para somar os valores 21 e 12 sem atribuir o resultado 33 a uma variável.
 
 expressões que o JavaScript utiliza
+
 - aritmética, como números, por exemplo, `7.323`
 - string, como caracteres, por exemplo, `"Melanie"` ou `1221`
-- lógica, como verdadeira ou falsa, por exemplo, `true` ou `false` 
+- lógica, como verdadeira ou falsa, por exemplo, `true` ou `false`
 - expressões primárias, como palavras reservadas, por exemplo, `this`
 - expressões lado esquerdo, como por exemplo: `var nomeObjeto = new tipoObjeto([parametro1, parametro2, ..., parametro3])`
 
@@ -47,59 +53,64 @@ no livro Eloquente JavaScript é citado da seguinte forma uma expressão:
 <br>
 
 # ponto e vírgula
+
 no JavaScript apesar de ser permitido instruções sem ponto e vírgula `;`, é recomendado que se use a cada linha pois sem o fazer, é possível que haja problemas na execução do seu código. O ponto e vírgula, como em muitas linguagens, é o símbolo que informa ao computador que a instrução foi finalizada para o JavaScript.
 
 ## sem o ponto e vírgula pode haver erros em sintaxe
 
-~~~javascript
-console.log('teste')
-console.log('testando')
-~~~
+```javascript
+console.log("teste");
+console.log("testando");
+```
 
 comprimindo, o código ficaria dessa forma
 
-~~~javascript
+```javascript
 console.log('teste')console.log('testando')
-~~~
+```
 
 gerando o famoso erro:
-> Uncaught SyntaxError: Unexpected identifier
-<br>
 
-desse modo, utilizariamos o ponto e vírgula, para que o erro seja previnindo pois separaria as intruções em JavaScript, delimitando a separação dos códigos fazendo com que o JavaScript consiga interpretar de forma concreta. Com isso em mente, é nítido o motivo de quase (se não todos) os programadores experientes em JavaScript recomendarem o uso de ponto e vírgula. 
+> Uncaught SyntaxError: Unexpected identifier
+> <br>
+
+desse modo, utilizariamos o ponto e vírgula, para que o erro seja previnindo pois separaria as intruções em JavaScript, delimitando a separação dos códigos fazendo com que o JavaScript consiga interpretar de forma concreta. Com isso em mente, é nítido o motivo de quase (se não todos) os programadores experientes em JavaScript recomendarem o uso de ponto e vírgula.
 
 a forma correta do exemplo mostrado seria:
 
-~~~javascript
-console.log('teste');
-console.log('testando');
-~~~
+```javascript
+console.log("teste");
+console.log("testando");
+```
 
 <br>
 
 # variáveis
+
 o programa se lembra das coisas que produzimos, expressões, declarações... Quando produzimos valores novos sem necessariamente apagar os antigos pois o JavaScript fornece uma coisa chamada `variável`.
 
-~~~javascript
+```javascript
 var minhaVariavel = 12 * 3;
-~~~
+```
 
 a variável _representada pela palavra especial `var`_, é o indicativo que uma variável vai ser criada, que é seguida pelo nome da variável e se quisérmos imediatamente declararmos o valor dessa variável podemos definir após o operador `=` e uma expressão.
 
-~~~javascript
+```javascript
 var nomeVariavelCriada = expressão;
 var idadeAluno = 19;
-~~~
+```
 
 após a variável ser definida, ela pode ser chamada pelo seu nome
 
-~~~javascript
+```javascript
 var notaPrimeiraProva = 9;
-console.log(notaPrimeiraProva + notaPrimeiraProva)
-~~~
+console.log(notaPrimeiraProva + notaPrimeiraProva);
+```
+
 vai ser retornado o valor `18`, pois na segunda linha fizemos a adição da variável `notaDaPrimeiraProva` + `notaDaPrimeiraProva`. Isso acontece pois o valor que essa variável guarda é _9_, logo, 9 + 9 = 18. É importante ressaltar que não existiu nenhuma modificação no valor dessa variável.
 
 os nomes das variáveis possuem algumas regras, entre elas:
+
 - não pode ser utilizado palavras reservadas (como `var`)
 - não pode conter espaços
 - dígitos numéricos podem ser incluídos (como `alunoNota10`), mas a variável não pode ser iniciada com um número, (como `30Anos`)
@@ -107,19 +118,20 @@ os nomes das variáveis possuem algumas regras, entre elas:
 
 é importante ressaltar que o nome _variável_ faz jus a sua utilidade. As variáveis podem alterar os seus valores a qualquer momento utilizando o operador `=`, que pode ser utilizado qualquer hora em variáveis existentes para poder desconectar o valor antigo e colocar um atual
 
-~~~javascript
-var luzes = "ligada"
+```javascript
+var luzes = "ligada";
 
-luzes = "desligado"
-~~~
+luzes = "desligado";
+```
 
-no bloco visto anteriormente, o valor da variável `var luzes` foi definido ainda durante a declaração com a expressão `"ligada"`, entretanto, uma linha a baixo o valor `"ligada"` da variável foi substituído para o valor `"desligado"`. 
+no bloco visto anteriormente, o valor da variável `var luzes` foi definido ainda durante a declaração com a expressão `"ligada"`, entretanto, uma linha a baixo o valor `"ligada"` da variável foi substituído para o valor `"desligado"`.
 
 <br>
 
 ##### a seguir teremos um exemplo do livro Eloquente JavaScript traduzido em português retirados do github - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
 
 ---
+
 <br>
 
 > Você deve imaginar variáveis como tentáculos, ao invés de caixas. Elas não contêm valores; elas os agarram - duas variáveis podem referenciar o mesmo valor. Somente os valores que o programa mantém tem o poder de ser acessado por ele. Quando você precisa se lembrar de algo, você aumenta o tentáculo para segurar ou recoloca um de seus tentáculos existentes para fazer isso.
@@ -135,17 +147,130 @@ luigisDebt = luigisDebt - 35;
 console.log(luigisDebt);
 // 105
 ```
+
 ---
 
 <br>
 
 # palavras-chave e palavras reservadas
+
 algumas palavras tem significados especiais, um exemplo é a palavra `var`, que é utilizada na declaração de variáveis. São chamadas de _keywords_ (palavras-chave) as palavras que são reservadas exclusivamente para alguma finalidade baseando na estrutura da linguagem. A lista de palavras reservadas é longa mas algumas delas são:
+
 > `break` `catch` `this` `with` `void` `while` `static` `swtich` `try` `typeof` `private` `yield` `instanceof` `let` `const`
 
 é importante ressaltar que não é extremamente importante memorizar as palavras reservadas, pois existem várias e futuramente novas podem vir a surgir. Lembre-se que este pode ser um problema caso algo não funcionar como esperado.
 
 <br>
+
+# funções
+
+uma função é um pedaço de programa envolvido por um valor que pode ser aplicado para executar alguma funcionalidade. O `alert`, por exemplo, é uma função que tem como objetivo mostrar uma pequena caixa de diálogo com uma mensagem.
+
+```javascript
+alert("hello, world!");
+```
+
+quando você utiliza uma função, você está _chamando_, _invocando_ ou _aplicando_ uma função.
+
+para chamar uma função basta utilizar os parênteses depois da expressão que produz um valor de função. No exemplo que foi mostrado a função `alert` utilizou os parênteses para ser chamada e dentro dele é perceptível que temos uma `string` escrita `"hello, world!"`, que aparece na chamada do diálogo. Os valores dentro da função (dentro dos parênteses) são chamados de _arguments_ (argumentos). A função `alert` utiliza apenas um argumento e outras funções utilizam diferentes valores.
+
+<br>
+
+# fluxo de controle
+
+em um programa que possui mais que uma declaração, as declarações são executadas de cima para baixo. Por exemplo
+
+## fluxo de controle em linha reta
+
+```javascript
+var numeroPar = 12;
+var numeroImpar = 11;
+
+console.log(numeroPar + numeroImpar);
+```
+
+o exemplo utilizado é um exemplo válido, pois como dito anteriormente, a leitura do código é feito de cima para baixo, tendo como último comando o `console.log` que retorna a soma do `numeroPar` e `numeroImpar`. A representação desse fluxo seria uma linha reta:
+
+##### a seguir teremos uma imagem do livro Eloquente JavaScript retirado do github - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
+
+<img src="assets/linhaRetaExemploFluxoReto.png"/>
+
+## execução condicional
+
+além do fluxo de controle em linha reta, temos também a _execução condicional_, onde escolhemos entre duas rotas diferentes baseadas em um valor lógico (booleano):
+
+##### a seguir teremos uma imagem do livro Eloquente JavaScript retirado do github - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
+
+<img src="assets/controleCondicionalExemplo.png">
+
+a execução condicional no JavaScript é denominada com a palavra-chave `if`, que nos casos mais simples permite que um código seja executado se _e somente se_ determinada condição existir.
+
+```javascript
+var numero = 12;
+
+if (numero === 12) {
+  alert("entrou nessa variável");
+}
+```
+
+no bloco anterior a condicional foi atendida pois a variável `numero` é idêntica (_verificado por causa do sinal de ===_) e desse modo ela disparou a função `alert`. Como percebido no código anterior, utilizamos os parênteses após o `if` para determinarmos o teste lógico e verificar se ele é verdadeiro _retorna `true` caso a expressão for verdadeira_ e _retorna `false` caso a expressão for falsa_.
+
+podemos utilizar, além do `if` a palavra-chave `else`, que pode ser utilizada juntamente com o `if` para criar dois caminhos distintos de execução. É importante ressaltar que caso a execução condicional `if` possuir um `else`, um dos dois caminhos são atendidos obrigatoriamente...
+
+```javascript
+var nomeUsuario = "Carlos";
+
+if (nomeUsuario === "Robson") {
+  alert("o nome do usuário não é Carlos");
+} else {
+  alert("o nome do usuário não é Robson");
+}
+```
+
+no exemplo anterior a condicional entra no `else`, pois na primeira linha foi definido que o nome do usuário é `"Carlos"` e não `"Robson"`. Isso aconteceu porque o teste condicional verificou se o `nomeUsuario === "Robson"`, ou seja, se o valor da variável `nomeUsuario` possui o valor idêntico a `"Robson"`, o que não aconteceu, desse modo a condição não foi atendida e entrou no bloco `else`.
+
+se tivermos mais do que dois caminhos para escolher, é possível implementar mútiplos pares de `if/else` que podem ser encadeados:
+
+```javascript
+var num = 12;
+
+if (num < 10) {
+  alert("pequeno");
+} else if (num < 100) {
+  alert("medio");
+} else {
+  alert("grande");
+}
+```
+
+seguindo essa lógica, o programa irá verificar se a variável `num` é inferior a 10, se for, chama a função `alert("pequeno")` e termina a sua execução. Se não for, ele irá entrar no segundo teste que é `if(num < 100)` e caso seja verdadeiro, o número está entre 10 e 100 e a função `alert("medio")` será mostrado. Caso contrário, o segundo e último else será escolhido.
+
+##### a seguir teremos uma imagem do livro Eloquente JavaScript retirado do github - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
+
+<img src="assets/controleCondicionalElseIf.png">
+
+<br>
+
+# estrutura de repetição
+
+## while e do
+caso quiséssemos imprimir os números de forma crescente de 0 a 12, uma forma que poderíamos fazer isso seria:
+
+```javascript
+console.log(0);
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+console.log(6);
+console.log(7);
+console.log(8);
+console.log(9);
+console.log(10);
+console.log(11);
+console.log(12);
+```
 
 ---
 
