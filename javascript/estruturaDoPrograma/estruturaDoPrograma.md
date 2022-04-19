@@ -251,9 +251,9 @@ seguindo essa lógica, o programa irá verificar se a variável `num` é inferio
 
 <br>
 
-# estrutura de repetição
+## estrutura de repetição
 
-## while e do
+## while
 caso quiséssemos imprimir os números de forma crescente de 0 a 12, uma forma que poderíamos fazer isso seria:
 
 ```javascript
@@ -271,6 +271,39 @@ console.log(10);
 console.log(11);
 console.log(12);
 ```
+
+entretanto, fazermos isso dessa forma (além de trabalhoso caso seja necessário chegarmos até número grandes) é deselegante. Pensando nisso surgiram os _loops_ de repetição.
+
+<img src="assets/loopsDeRepeticao.png">
+
+A ideia do _loops de repetição_ é voltarmos a determinado ponto do nosso programa e repetir determinado processamento. Vamos utilizar o código demonstrado anteriormente _(o console.log de 0 até 10)_ e utilizarmos a estrutura de repetição `while`. 
+
+~~~javascript
+var number = 0;
+while (number <= 12){
+  console.log(number);
+  number = number + 1;
+}
+~~~
+
+A declaração iniciada com a palavra `while` é responsável por criar um loop. Após a palavra `while` temos parêteses que funcionam similar a declração `if`. O _loop_ irá se repetir até que a expressão lógica (_o teste lógico dentro dos parênteses_) seja atendida e convertida para o valor booleano seja igual a `true`. 
+
+É importante ressaltar que processamentos envolvidos por chaves são chamados de __blocos__. Com isso em mente, é importante ressaltar que é possível identificar um processamento dentro das chaves: Imprimimos na tela o valor da variável `number` com o `console.log()`. Esse _loop_ irá se repetir até que a variável `number` atinja o valor `12` – esse valor foi definido na expressão lógica dentro dos parêteses. No início de cada repetição será imprimido o valor atual da variável `number` e toda vez que o _loop_ se repete é incrementado por `1`; no início de cada repetição ele é novamente comparador com o número `12` para verificar se a condicional foi atendida.
+
+## DO
+O _loop_ `do` é uma estrutura de repetição similar ao `while`, a única diferença é que o do irá executar as declarações pelo menos uma vez antes de fazer a verificação se o __loop_ deve ser encerrado ou não.
+
+~~~javascript
+do {
+  var cidade = prompt("Qual a sua cidade?");
+  console.log(cidade)
+} while (!cidade);
+~~~
+
+No código acima  o programa esse _loop_ será repetido até que a idade do usuário seja inserida pois a verificação lógica possui `!idade`. É importante ressaltar que quando uma variável recebe o valor `""` (uma string vazia) é retornado `false`. O sinal `!` significa __negação__, a variável sempre terá o seu valor oposto. Todas as `strings` exceto o `""` convertem para true, verificando quando algum valor diferente de `""` foi fornecido pelo usuário.
+## LOOPS FOR
+
+
 
 ---
 
