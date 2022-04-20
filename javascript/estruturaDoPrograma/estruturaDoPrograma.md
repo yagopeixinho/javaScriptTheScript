@@ -197,6 +197,8 @@ o exemplo utilizado é um exemplo válido, pois como dito anteriormente, a leitu
 
 ## execução condicional
 
+## if/else
+
 além do fluxo de controle em linha reta, temos também a _execução condicional_, onde escolhemos entre duas rotas diferentes baseadas em um valor lógico (booleano):
 
 ##### a seguir teremos uma imagem do livro Eloquente JavaScript retirado do github - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
@@ -251,7 +253,37 @@ seguindo essa lógica, o programa irá verificar se a variável `num` é inferio
 
 <br>
 
-## estrutura de repetição
+## switch
+Além do comando de execução condicional `if`, temos outro comando de execução condicional no JavaScript que herdou uma sintaxe da mesma linha das linguagens de programação _C_ e _Java_.
+
+~~~javascript
+switch(prompt("Qual a sua estação favorita?")){
+  case "verão":
+    console.log("Então você gosta de calor");
+    break;
+  case "outono":
+    console.log("Eu também adoro as folhas cadentes do outono!");
+    break;
+  case "inverno":
+    console.log("Café ou chocolate quente?");
+  case "primavera":
+    console.log("O verão está vindo aí...");
+    break;
+  default:
+    console.log("Estação informada não foi reconhecida");
+    break;
+}
+~~~
+
+Dentro do bloco envolvido pelo `switch` é possível colocar rótulos `case`. Durante a execução, o programa irá pular para o bloco corresponte ao valor que o `switch` fornece (no caso a informação inserida pelo usuário por causa do `prompt`), caso o valor fornecido pelo usuário seja um valor que não foi definido como um dos `case` o programa irá entrar na linha `default`. 
+
+No programa as declarações são executadas até seja encontrado uma declaração `break`. No nosso programa no `case "inverno":` pode não temos a declaração `break`, logo o interpretador JavaScript irá compartilhar o código entre os `cases`, lendo o `case` que vem abaixo, por isso é importante ter cuidado pois é fácil esquecer um `break` e isso fará com que o programa execute algo de modo o qual você não queira executar.
+
+
+<br>
+<br>
+
+# estrutura de repetição
 
 ## while
 caso quiséssemos imprimir os números de forma crescente de 0 a 12, uma forma que poderíamos fazer isso seria:
@@ -302,7 +334,39 @@ do {
 
 No código acima  o programa esse _loop_ será repetido até que a idade do usuário seja inserida pois a verificação lógica possui `!idade`. É importante ressaltar que quando uma variável recebe o valor `""` (uma string vazia) é retornado `false`. O sinal `!` significa __negação__, a variável sempre terá o seu valor oposto. Todas as `strings` exceto o `""` convertem para true, verificando quando algum valor diferente de `""` foi fornecido pelo usuário.
 ## LOOPS FOR
+Muito dos loops que conhecemos atualmente utilizam uma variável contadora que monitora a situação do _loop_. Nos exemplos anteriores temos a variável `number` que é atualizado toda vez em que o loop acontece. Por esse padrão ser muito comum, muitas linguagens nos permite utilizar de uma estrutura compreensiva chamada _loop_ `for`.
 
+~~~javascript
+for(var number = 0; number <= 2; number = number + 1){
+  console.log(number)
+}
+~~~
+
+O trecho de código anterior faz exatamente o que fizemos anteriormente no [`while`](#while), a única diferença entre eles é que todos os envolvidos para verificar o "estado" do _loop_ estão relacionados, tornando o código mais objetivo e compreensivel. 
+
+Os parênteses após a declaração `for` deve conter dois ponto e vírgula "`;`", A primeira parte inicializa o loop que normalmente definimos uma variável. A segunda parte é aonde verificamos se o _loop_ deve ou não continuar. A última parte atualiza o estado do loop após cada iteração.
+
+## QUEBRANDO EXECUÇÃO DE UM LOOP
+Sabemos que quando temos uma expressão lógica que possua o valor lógico `false` conseguimos parar um _loop_. Entretanto, é importante termos em mente que existem outras declarações que podem parar _loops_.
+
+Existe uma declaração especial conhecida por `break` que tem o poder de finalizar a execução e sair do loop.
+
+~~~javascript
+for(var current = 20; ; current++){
+  if(current == 12){
+    break;
+  }
+}
+~~~
+
+A construção desse `for` não possui o teste lógica que verifica o fim do loop, ou seja... a única forma desse _loop_ parar é quando a declaração `break` contida no bloco for executada.
+
+Caso você acidentalmente escrever uma condição que sempre retorne o valor `true`, seu programa ficará preso em um _loop infinito_. Um loop infinito não vai parar de ser executado até que haja uma declaração `break` ou uma condição que retorne o valor `true`. Na grande maioria dos casos o _loop infinito_ é algo ruim.
+
+A palavra chave `continue` é similar ao `break` pois também é algo que influencia o comportamento do loop. Quando informamos o comando `continue` dentro de um _loop_, o controle de execução pula para fora do corpo e executa novamente a próxima iteração do _loop_  (em palavras simples o _loop_ volta do início e refaz a execução do bloco novamente).
+
+<br>
+<br>
 
 
 ---
