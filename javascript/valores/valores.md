@@ -10,7 +10,7 @@
 
 <br>
 
-# valores em JavaScript
+# VALOLRES EM JAVASCRIPT
 
 ## sumário
 - [números fracionais](#operadores-em-javascript)
