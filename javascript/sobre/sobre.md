@@ -6,15 +6,25 @@
 
 <br>
 
-> javaScript é uma linguagem de programação criada por Brendan Eich, a pedido da empresa Netscape, em meados de 1950, inicialmente com o nome _Live Script_
+> JavaScript é uma linguagem de programação criada por Brendan Eich, a pedido da empresa Netscape, em meados de 1950, inicialmente com o nome _Live Script_.
 
 <br> 
 
-# o que é JavaScript? 
+# Sobre esse documento
+Esse documento é um estudo a respeito da linguagem de programação JavaScript. Vemos os _valores, operadores, estrutura do programa_ etc. 
 
-o JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e de multiparadigma. foi introduzido em 1995, criada originalmente para funcionar do lado do usuário - nos navegadores. O JavaScript é bastante popular e é uma das principais tecnologias da _world wide web_ atualmente, permitindo a criação de páginas interativas com elementos dinâmicos e uma boa interface.
 
-- por que o nome "JavaScript"?
+# Recomendação
+- É altamente recomendado que você possua conhecimento mínimo em lógica de programação ou conhecimento básico da linguagem JavaScript antes de ler esse documento
+- Esse documento pode ser lido com qualidade em seus dispositivos móveis como smarthphone ou tablets
+
+
+
+
+# O que é JavaScript? 
+O JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e de multiparadigma. foi introduzido em 1995, criada originalmente para funcionar do lado do usuário - nos navegadores. O JavaScript é bastante popular e é uma das principais tecnologias da _world wide web_ atualmente, permitindo a criação de páginas interativas com elementos dinâmicos e uma boa interface.
+
+- Por que o nome "JavaScript"?
 > é importante ressaltar que o _JavaScript_ não tem nada a ver com o _Java_, o nome similar foi inspirado por marketing. O nome inicial a princípio seria _Mocha_ (nome de um tipo de café), logo em seguida esse nome foi trocado para _LiveScript_, portanto, quando o JavaScript foi introduzido no mercado a linguagem _Java_ estava em alta no mercado e estava ganhando cada vez mais popularidade. Alguém por algum motivo pensou que seria uma boa ideia pegar carona no nome _Java_ - e agora estamos presos a ele - _JavaScript_.
  
 <br>

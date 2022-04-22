@@ -1,52 +1,52 @@
 <div class="header">
-    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" width="100"/> valores | peixinho yago 
+    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" width="100"/> Valores | Yago Peixinho
 </div>
 
 ---
 
 <br>
 
-> para que seja possível trabalhar com tais quantidades de bits sem ficar perdido, você popde separá-los em partes que representam pedaços de informações. No ambiente JavaScript essas partes são chamadas de _valores_.
+> Para que seja possível trabalhar com tais quantidades de bits sem ficar perdido, você popde separá-los em partes que representam pedaços de informações. No ambiente JavaScript essas partes são chamadas de _valores_.
 
 <br>
 
-# VALOLRES EM JAVASCRIPT
-
-## sumário
-- [números fracionais](#operadores-em-javascript)
-- [strings](#strings)
-- [booleanos](#valores-booleanos)
+# Valores em JavaScript
+- [Números](#operadores-em-javascript)
+- [Strings](#strings)
+- [Booleanos](#valores-booleanos)
 
 
 Existem seis tipos básicos de valores no JavaScript: _números, Strings, Booleanos, objetos, funções e valores indefinidos_. Quando você desejar criar um valor você só precisa invocar o nome do seu valor; É claro que não são criados do nada, todo valor precisa estar armazenado em algum lugar e se você quiser utilizar uma quantidade enorme dele pode acabar ficando sem bits. Porém é importante ressaltar que a medida em que você não utiliza um valor ele será dissipado, fazendo com que seus bits sejam reciclados e disponibilziando-os para serem usados nas contruções de outros valores.
 
-# números
+<br>
 
-os valores de tipo _número_ em um programa são escritos assim:
+# Números
+
+Os valores de tipo _número_ em um programa são escritos assim:
 
 ```javascript
 13;
 ```
 
-colocar esse valor em um programa fará com que os padrões de bits referente ao número 13 sejam criados e passem a existir na memória do computador.
+Colocar esse valor em um programa fará com que os padrões de bits referente ao número 13 sejam criados e passem a existir na memória do computador.
 
-## números fracionais
+## Números fracionais
 
-números fracionais são escritos utilizando um ponto
+Números fracionais são escritos utilizando um ponto
 
 ```javascript
 2.81;
 ```
 
-para números muitos grandes ou pequenos você pode utilziar a notação científica adicionando um "e" (de "expoente") seguido do valor do expoente:
+Para números muitos grandes ou pequenos você pode utilziar a notação científica adicionando um "e" (de "expoente") seguido do valor do expoente:
 
 ```javascript
 2.9998e8;
 ```
 
-## números especiais
+## Números especiais
 
-no JavaScript podemos encontrar três valores especiais que são considerados números mas não se comportam como números normais.
+No JavaScript podemos encontrar três valores especiais que são considerados números mas não se comportam como números normais.
 
 `Infinity` e `-Infinity`, que são valores utilizados para representar os infinitos positivos e negativos, sendo que o cálculo `Infinity - 1` continua sendo `Infinity`, assim como quaisquer variação dessa conta. Portanto, é necessário salientar que não é válido confiarmos em cálculos baseados no valor inifito, pois esse valor não é sólido matematicamente falando e rapidamente nos levará a um número especial: `NaN`.
 
@@ -54,31 +54,31 @@ no JavaScript podemos encontrar três valores especiais que são considerados n�
 
 <br>
 
-# strings
-as Strings são utilizadas para representar textos seu conteúdo é declarado utilizando aspas simples ou duplas, o seu conteúdo vai entre elas; é importante ressaltar que a aspa inicial e final devem ser idênticas, portnato se você iniciou uma string com (`"`), o final da sua `String` deve conter (`"`) também. 
+# Strings
+As Strings são utilizadas para representar textos seu conteúdo é declarado utilizando aspas simples ou duplas, o seu conteúdo vai entre elas; é importante ressaltar que a aspa inicial e final devem ser idênticas, portanto se você iniciou uma string com (`"`), o final da sua `String` deve conter (`"`) também. 
 
 ~~~javascript
-"olá, eu sou uma string, prazer em conhecer você!"
-'eu também sou uma string, porém com aspas simples'
+"Olá, eu sou uma string, prazer em conhecer você!"
+'Eu também sou uma string, porém com aspas simples'
 ~~~
 
-### newlines
+### Newlines
+No JavaScript uma grande parte dos valores podem ser colocados entre aspas de modo em que o JavaScript transformará esse elemento um valor do tipo `String`. Desse modo, imagine que queremos colocar aspas dentro de aspas? De qualquer modo, os caracteres _newlines_ (quebra de linhas quando pressionamos a tecla _Enter_) também não pode ser utilizada dentro de uma `String`.
+> As Strings devem permanecer em linha única!
 
-no JavaScript uma grande parte dos valores podem ser colocados entre aspas de modo em que o JavaScript transformará esse elemento um valor do tipo `String`. Desse modo, imagine que queremos colocar aspas dentro de aspas? De qualquer modo, os caracteres _newlines_ (quebra de linhas quando pressionamos a tecla _Enter_) também não pode ser utilizada dentro de uma `String`.
-> as Strings devem permanecer em linha única!
+Para que seja possível quebrar a linha de uma string, eis a notação utilizada: 
 
-para que seja possível quebrar a linha de uma string, eis a notação utilizada: 
-
-toda vez que um caraactere de barra invertida `\` for encontrada dentro de uma `String` indica que o caractere seguinte possui uma indicação especial chamada __escapar o caractere__ - uma aspa que se encontra logo após uma barra invertida não indica a finalização da `String` mas que faz parte do texto. O caractere `n` após uma barra invertida é considerado uma quebra de linha e o `t` é considerado um caractere de tabulação: `"você está lendo a primeira linha\nE agora você está lendo a segunda linha"`.
+Toda vez que um caractere de barra invertida `\` for encontrada dentro de uma `String` indica que o caractere seguinte possui uma indicação especial chamada __escapar o caractere__ - uma aspa que se encontra logo após uma barra invertida não indica a finalização da `String` mas que faz parte do texto. O caractere `n` após uma barra invertida é considerado uma quebra de linha e o `t` é considerado um caractere de tabulação: `"você está lendo a primeira linha\nE agora você está lendo a segunda linha"`.
 
 <br>
 
 
-# valores booleanos
-na programação, frequentemente precisamos utilizar um valor que possa nos ajudar a dinstringuir entre duas possibilidades
+# Valores Booleanos
+Na programação, frequentemente precisamos utilizar um valor que possa nos ajudar a distinguir entre duas possibilidades.
 
-## comparações
-essa é uma maneira de produzir valores booleanos:
+## Comparações
+eEssa é uma maneira de produzir valores booleanos:
+
 ~~~javascript
 console.log(3 > 2)
 // -> true
@@ -87,23 +87,24 @@ console.log(3 < 2)
 // -> false
 ~~~
 
-geralmente os valores de comparações resultam em algum resultado `true` ou `false`.
+Geralmente os valores de comparações resultam em algum resultado `true` ou `false`.
 
-> no JavaScript existe apenas um valor que não é igual a ele mesmo, que é o valor NaN, que significa "not a number", que em português significa "não é um número".
+No JavaScript existe apenas um valor que não é igual a ele mesmo, que é o valor NaN, que significa "not a number", que em português significa "não é um número".
+
 ~~~javascript
 console.log(NaN == NaN)
 ~~~
-> `NaN` é utilizado como retorno indicativo de que o resultado de alguma operação que não tenha sentido.
+
+`NaN` é utilizado como retorno indicativo de que o resultado de alguma operação que não tenha sentido.
+
+<br>
+
+# Valores indefinidos
+No JavaScript é muito comum nos depararmos com os valores `null` e `undefined`. O valor `undefined` é geralmente utilizado quando uma variável não possui nenhum valor, o `null` é utilizado quando queremos intencionalmente definir que existe a ausência de qualquer valor em determinada variável.
+
 
 <br>
 <br>
-
-# valores indefinidos
-no JavaScript é muito comum nos depararmos com os valores `null` e `undefined`. O valor `undefined` é geralmente utilizado quando uma variável não possui nenhum valor, o `null` é utilizado quando queremos intencionalmente definir que existe a ausência de quaqluer valor em determinada variável.
-
-
-
-
 <br>
 <br>
 
@@ -126,8 +127,7 @@ no JavaScript é muito comum nos depararmos com os valores `null` e `undefined`.
 </div>
 <div>
 
-#### referências desse documento
-
+#### Referências nesse documento
 - https://developer.mozilla.org/pt-BR/
 - https://eloquentjavascript.net/
 

@@ -1,138 +1,116 @@
 <div class="header">
-    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" width="100"/> operadores | peixinho yago 
+    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" width="100"/> Operadores | Yago Peixinho
 </div>
 
 ---
 
 <br>
 
-> nesse documento descrevemos expressões e operadores de JavaScript, _incluindo operadores e atribuições, comparações, bit a bit, lógicos,strings e especiais_</i>.
+> Nesse documento descrevemos expressões e operadores de JavaScript, _incluindo operadores e atribuições, comparações, bit a bit, lógicos,strings e especiais_</i>.
 
 <br>
 
-# operadores em JavaScript
+# Operadores em JavaScript
+- [Operadores de atribuição](#operadores-de-atribuição)
+- [Operadores de comparação](#operadores-de-comparação)
+- [Operadores aritméticos](#operadores-aritméticos)
+- [Operadores lógicos](#operadores-lógicos)
+  - [Avaliação curto-circuito](#avaliação-curto-circuito)
+- [Operadores de string](#operadores-de-string)
+  - [Template String](#template-string)
+- [Operador ternário](#operador-ternário)
+- [Operador unário](#operador-unário)
 
-é importante ressaltar que o JavaScript possui tantos operadores _binários_ quanto _urinários_ e um operador ternário que é o condicional.
+Primeiramente, é importante ressaltar que o JavaScript possui tantos operadores _binários_ quanto _urinários_ e um operador ternário que é o condicional.
 
-### o JavaScript possui todos os tipos de operadores a seguir:
-
-- [operadores em JavaScript](#operadores-em-javascript)
-    - [o JavaScript possui todos os tipos de operadores a seguir:](#o-javascript-possui-todos-os-tipos-de-operadores-a-seguir)
-- [operadores de atribuição](#operadores-de-atribuição)
-- [operadores de comparação](#operadores-de-comparação)
-- [operadores aritméticos](#operadores-aritméticos)
-- [operadores lógicos](#operadores-lógicos)
-  - [exemplos práticos](#exemplos-práticos)
-        - [exemplos retirados do mnd web docs](#exemplos-retirados-do-mnd-web-docs)
-      - [o código a seguir mostra exemplos do operador && (E lógico).](#o-código-a-seguir-mostra-exemplos-do-operador--e-lógico)
-      - [o código a seguir mostra exemplos do operador || (OU lógico).](#o-código-a-seguir-mostra-exemplos-do-operador--ou-lógico)
-      - [o código a seguir mostra exemplos do operador ! (negação lógica).](#o-código-a-seguir-mostra-exemplos-do-operador--negação-lógica)
-- [avaliação curto-circuito](#avaliação-curto-circuito)
-- [operadores de string](#operadores-de-string)
-  - [template string](#template-string)
-- [operador ternário](#operador-ternário)
-- [operador unário](#operador-unário)
-        - [exemplos retirados do mnd web docs](#exemplos-retirados-do-mnd-web-docs-1)
-  - [apagando elementosdo array](#apagando-elementosdo-array)
-      - [referências desse documento](#referências-desse-documento)
 
 <br>
 
-# operadores de atribuição
+# Operadores de atribuição
+Um operador de atribuição atribui um valor ao operando à sua esquerda baseado no valor do operando à sua direita. No javaScript (e em muitas outras linguagens) utilizamos o "`=`". O "`=`" atribui o valor do operando à direita ao operando à esquerda. Isto é: `x = y` atribui o valor de `y` a `x`.
 
-um operador de atribuição atribui um valor ao operando à sua esquerda baseado no valor do operando à sua direita. No javaScript (e em muitas outras linguagens) utilizamos o "=". O "=" atribui o valor do operando à direita ao operando à esquerda. Isto é: _x = y_ atribui o valor de _y_ a _x_.
-
----
-
-| nome                                                       | operador encurtado | significado  |
+| Nome                                                       | Operador encurtado | Significado  |
 | ---------------------------------------------------------- | ------------------ | ------------ |
-| atribuição                                                 | x = y              | x = y        |
-| atribuição de adição                                       | x += y             | x = x + y    |
-| atribuição de subtração                                    | x -= y             | x = x - y    |
-| atribuição de multiplicação                                | x \*= y            | x = x \* y   |
-| atribuição de divisão                                      | x /= y             | x = x / y    |
-| atribuição de resto                                        | x %= y             | x = x % y    |
-| atribuição exponencial                                     | x \*\*= y          | x = x \*\* y |
-| atribuição bit-a-bit por deslocamento á esquerda           | x <<= y            | x = x << y   |
-| atribuição bit-a-bit por deslocamento á direita            | x >>= y            | x = x >> y   |
-| atribuiçãode bit-a-bit deslocamento á direita não assinado | x >>>= y           | x = x >>> y  |
-| atribuição AND bit-a-bit                                   | x &= y             | x = x & y    |
-| atribuição XOR bit-a-bit                                   | x ^= y             | x = x ^ y    |
-| atribuição OR bit-a-bit                                    | x \|= y            | x = x \| y   |
+| Atribuição                                                 | x = y              | x = y        |
+| Atribuição de adição                                       | x += y             | x = x + y    |
+| Atribuição de subtração                                    | x -= y             | x = x - y    |
+| Atribuição de multiplicação                                | x \*= y            | x = x \* y   |
+| Atribuição de divisão                                      | x /= y             | x = x / y    |
+| Atribuição de resto                                        | x %= y             | x = x % y    |
+| Atribuição exponencial                                     | x \*\*= y          | x = x \*\* y |
+| Atribuição bit-a-bit por deslocamento à esquerda           | x <<= y            | x = x << y   |
+| Atribuição bit-a-bit por deslocamento à direita            | x >>= y            | x = x >> y   |
+| Atribuição de bit-a-bit deslocamento à direita não assinado | x >>>= y           | x = x >>> y  |
+| Atribuição AND bit-a-bit                                   | x &= y             | x = x & y    |
+| Atribuição XOR bit-a-bit                                   | x ^= y             | x = x ^ y    |
+| Atribuição OR bit-a-bit                                    | x \|= y            | x = x \| y   |
 
 <br>
 
-# operadores de comparação
+# Operadores de comparação
+Um operador de comparação compara seus operandos e retorna um valor lógico `true` ou `false` baseado em se a comparação é verdadeira. As comparações são feitas baseadas em tipos númericos, lógicos, objetos ou strings. no JavaScript as strings são comparadas _com base em ordenação lexográfica utilizando os valores Unicode_. Quando você compara dois operando que não são do mesmo tipo, o JavaScript tenta converter para um tipo apropriado. É importante ressaltar que as únicas exceções a esta regras são os operadores === e o !==. Esses operadores verificam se os operandos são idênticos. Ou seja, não há uma tentativa de converter os operando em outros tipos compatíveis antes de verificar se são iguais.
 
-um operador de comparação compara seus operandos e retorna um valor lógico _true ou false_ baseado em se a comparação é verdadeira. As comparações são feitas baseadas em tipos númericos, lógicos, objetos ou strings. no JavaScript as strings são comparadas _com base em ordenação lexográfica utilizando os valores Unicode_. Quando você compara dois operando que não são do mesmo tipo, o JavaScript tenta converter para um tipo apropriado. É importante ressaltar que as únicas exceções a esta regras são os operadores === e o !==. Esses operadores verificam se os operandos são idênticos. Ou seja, não há uma tentativa de converter os operando em outros tipos compatíveis antes de verificar se são iguais.
-
----
-
-| operador                     | descrição                                                                                                           | exemplos que retornam verdadeiro   |
+| Operador                     | Descrição                                                                                                           | Exemplos que retornam verdadeiro   |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| igual (==)                   | retorna verdadeiro caso os operandos sejam iguais.                                                                  | 3 == var1 <br>"3" == var1 3 == '3' |
-| não igual (!=)               | retorna verdadeiro caso os operandos não sejam iguais.                                                              | var1 != 4<br> var2 != "3"          |
-| estritamente igual (===)     | retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja também Object.is e igualdade em JS (en-US). | 3 === var1                         |
-| estritamente não igual (!==) | retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                 | var1 !== "3"<br> 3 !== '3'         |
-| maior que (>)                | retorna verdadeiro caso o operando da esquerda seja maior que o da direita.                                         | var2 > var1<br> "12" > 2           |
-| maior que ou igual (>=)      | retorna verdadeiro caso o operando da esquerda seja maior ou igual ao da direita.                                   | var2 >= var1<br> var1 >= 3         |
-| menor que (<)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                         | var1 < var2<br> "12" < "2"         |
-| menor que ou igual (<=)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                   | var1 <= var2<br> var2 <= 5         |
+| Igual (==)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                  | 3 == var1 <br>"3" == var1 3 == '3' |
+| Não igual (!=)               | Retorna verdadeiro caso os operandos não sejam iguais.                                                              | var1 != 4<br> var2 != "3"          |
+| Estritamente igual (===)     | Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja também Object.is e igualdade em JS (en-US). | 3 === var1                         |
+| Estritamente não igual (!==) | Retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                 | var1 !== "3"<br> 3 !== '3'         |
+| Maior que (>)                | Retorna verdadeiro caso o operando da esquerda seja maior que o da direita.                                         | var2 > var1<br> "12" > 2           |
+| Maior que ou igual (>=)      | Retorna verdadeiro caso o operando da esquerda seja maior ou igual ao da direita.                                   | var2 >= var1<br> var1 >= 3         |
+| Menor que (<)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                         | var1 < var2<br> "12" < "2"         |
+| Menor que ou igual (<=)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                   | var1 <= var2<br> var2 <= 5         |
 
 <br>
 
-# operadores aritméticos
+# Operadores aritméticos
+Os operadores aritméticos padrões são:
 
-os operadores aritméticos padrões são:
+- Soma (`+`)
+- Subtração (`-`)
+- Multiplicação (`*`)
+- Divisão (`/`)
 
-- soma (+)
-- subtração (-)
-- multiplicação (\*)
-- divisão (/)
-
-esses operadores geralmente trabalham da mesma forma em todas as linguagens de programação. Eles são utilizados com valores númericos (sejam literais ou variáveis) como seus operandos e retornam um valor numérico.
+Esses operadores geralmente trabalham da mesma forma em todas as linguagens de programação. Eles são utilizados com valores númericos (sejam literais ou variáveis) como seus operandos e retornam um valor numérico.
 
 ```javascript
 console.log(1 + 1); // imprime 2
 console.log(3 + 1 == 2 + 2); // isso retorna verdadeiro
 ```
 
-para complementar às operações aritméticas padrões ( +, -, \*, / ), o JavaScript nos disponibiliza operadores aritméticos que podem nos auxiliar durante o dia a dia listados na tabela a seguir:
+Para complementar às operações aritméticas padrões (` +, -, \*, / `), o JavaScript disponibiliza operadores aritméticos que podem nos auxiliar durante o dia a dia listados na tabela a seguir:
 
 ---
 
-| operador                             | descrição                                                                                                                                                                                                                            | exemplo                                                                                                    |
+| Operador                             | Descrição                                                                                                                                                                                                                            | Exemplo                                                                                                    |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| módulo (%)                           | operador binário. Retorna o inteiro restante da divisão dos dois operandos.                                                                                                                                                          | 12 % 5 retorna 2.                                                                                          |
-| incremento (++)                      | operador unário. Adiciona um ao seu operando. Se usado como operador prefixado <br(++x), retorna o valor de seu operando após a adição. Se usado como operador<br> pósfixado (x++), retorna o valor de seu operando antes da adição. | se x é 3, então ++x define x como 4 e retorna 4, enquanto x++ retorna 3 e, somente então, define x como 4. |
-| decremento (--)                      | operador unário. Subtrai um de seu operando.<br> O valor de retorno é análogo àquele do operador de incremento.                                                                                                                      | se x é 3, então --x define x como 2 e retorna 2, enquanto x-- retorna 3 e, somente então, define x como 2. |
-| negação (-)                          | operador unário. Retorna a negação de seu operando.                                                                                                                                                                                  | se x é 3, então -x retorna -3.                                                                             |
-| adição (+)                           | operador unário. Tenta converter o operando em um número, sempre que possível.                                                                                                                                                       | +"3" retorna 3.<br> <br>+true retorna 1.                                                                   |
-| operador de <br>exponenciação (\*\*) | calcula a base elevada á potência do expoente, que é, base expoente                                                                                                                                                                  | 2 ** 3 retorna 8.<br> <br>10 ** -1 retorna 0.1                                                             |
+| Módulo (%)                           | Operador binário. Retorna o inteiro restante da divisão dos dois operandos.                                                                                                                                                          | 12 % 5 retorna 2.                                                                                          |
+| Incremento (++)                      | Operador unário. Adiciona um ao seu operando. Se usado como operador prefixado <br(++x), retorna o valor de seu operando após a adição. Se usado como operador<br> pósfixado (x++), retorna o valor de seu operando antes da adição. | Se x é 3, então ++x define x como 4 e retorna 4, enquanto x++ retorna 3 e, somente então, define x como 4. |
+| Decremento (--)                      | Operador unário. Subtrai um de seu operando.<br> O valor de retorno é análogo àquele do operador de incremento.                                                                                                                      | Se x é 3, então --x define x como 2 e retorna 2, enquanto x-- retorna 3 e, somente então, define x como 2. |
+| Negação (-)                          | Operador unário. Retorna a negação de seu operando.                                                                                                                                                                                  | Se x é 3, então -x retorna -3.                                                                             |
+| Adição (+)                           | Operador unário. Tenta converter o operando em um número, sempre que possível.                                                                                                                                                       | +"3" retorna 3.<br> <br>+true retorna 1.                                                                   |
+| Operador de <br>exponenciação (\*\*) | Calcula a base elevada á potência do expoente, que é, base expoente                                                                                                                                                                  | 2 ** 3 retorna 8.<br> <br>10 ** -1 retorna 0.1                                                             |
 
 <br>
 
-# operadores lógicos
+# Operadores lógicos
+Operadores lógicos são utilizados tipicamente com valores booleanos (lógicos);
 
-operadores lógicos são utilizados tipicamente com valores booleanos (lógicos);
-
-| operador         | utilização       | descrição                                                                                                                                                                                                                                           |
+| Operador         | Utilização       | Descrição                                                                                                                                                                                                                                           |
 | ---------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AND lógico (&&)  | expr1 && expr2   | (E lógico) - Retorna expr1 caso possa ser convertido para falso; senão, retorna expr2. Assim, quando utilizado com valores booleanos, && retorna verdadeiro caso ambos operandos sejam verdadeiros; caso contrário, retorna falso.                  |
 | OU lógico (\|\|) | expr1 \|\| expr2 | (OU lógico) - Retorna expr1 caso possa ser convertido para verdadeiro; senão, retorna expr2. Assim, quando utilizado com valores booleanos, \|\| retorna verdadeiro caso ambos os operandos sejam verdadeiro; se ambos forem falsos, retorna falso. |
 | NOT lógico (!)   | !expr            | (Negação lógica) Retorna falso caso o único operando possa ser convertido para verdadeiro; senão, retorna verdadeiro.                                                                                                                               |
 
-outro exemplo de valores que podem ser considerados como **falso** são aqueles valores que são avaliados como _nulo, 0, string vazia ("") ou undefined_.
+Outro exemplo de valores que podem ser considerados como `falso` são aqueles valores que são avaliados como `nulo`, `0`, string vazia (`""`) ou `undefined`.
 
 <br>
 
-## exemplos práticos
-
-##### exemplos retirados do [mnd web docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)
-
+## Exemplos práticos
+##### _exemplos retirados do [mnd web docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)_
 ---
 
-#### o código a seguir mostra exemplos do operador && (E lógico).
+#### O código a seguir mostra exemplos do operador && (E lógico).
 
 ```javascript
 var a1 = true && true; // t && t retorna true
@@ -144,7 +122,7 @@ var a6 = false && "Gato"; // f && t retorna false
 var a7 = "Gato" && false; // t && f retorna false
 ```
 
-#### o código a seguir mostra exemplos do operador || (OU lógico).
+#### O código a seguir mostra exemplos do operador || (OU lógico).
 
 ```javascript
 var o1 = true || true; // t || t retorna true
@@ -156,7 +134,7 @@ var o6 = false || "Gato"; // f || t retorna Gato
 var o7 = "Gato" || false; // t || f retorna Gato
 ```
 
-#### o código a seguir mostra exemplos do operador ! (negação lógica).
+#### O código a seguir mostra exemplos do operador ! (negação lógica).
 
 ```javascript
 var n1 = !true; // !t retorna false
@@ -166,89 +144,82 @@ var n3 = !"Gato"; // !t retorna false
 
 <br>
 
-# avaliação curto-circuito
+## Avaliação curto-circuito
 
-as expressão lógicas são testadas pelo valor iniciado da esquerda para a direita. Desse modo, é possível fazer um teste chamado "curto-circuito", utilizando as seguintes regras:
+As expressão lógicas são testadas pelo valor iniciado da esquerda para a direita. Desse modo, é possível fazer um teste chamado "curto-circuito", utilizando as seguintes regras:
 
-> - false && qualquercoisa é avaliado em curto-circuito como falso.
-> - true || qualquercoisa é avaliado em curto-circuito como verdadeiro.
+> - `false && qualquercoisa` é avaliado em curto-circuito como falso.
+> - `true || qualquercoisa` é avaliado em curto-circuito como verdadeiro.
 
-desse modo é possível verificarmos se as regras da lógica avaliada estão corretas, pois, reperando que a parte "qualquercoisa" das expressões acima não são avaliadas de forma que qualquer nova lógica implementada após não produzirá efeito nenhum.
+Desse modo é possível verificarmos se as regras da lógica avaliada estão corretas, pois, analisando que a parte `qualquercoisa` das expressões acima não são avaliadas de forma que qualquer nova lógica implementada após não produzirá efeito nenhum.
 
 <br>
 
-# operadores de string
-
-além dos operadores de comparação, que podem ser utilizados em valores tring, o operador de _concatenação_ (+) concatena dois valores string, retornando outra string que é a união dos dois operandos.
-
-exemplos:
+# Operadores de string
+Além dos operadores de comparação, que podem ser utilizados em valores String, o operador de _concatenação_ (`+`) concatena dois valores string, retornando outra string que é a união dos dois operandos.
 
 ```javascript
-console.log("minha " + "string"); // retorna a mensagem "minha string"
+console.log("Minha " + "String"); // retorna a mensagem "Minha String"
 ```
 
 ```javascript
 var inicial = "mundo";
-console.log("olá " + inicial); // vai ser imprimido no console a mensagem "olá mundo"
+console.log("Olá " + inicial); // vai ser imprimido no console a mensagem "Olá mundo"
 ```
 
-existe também um operador de atribuição encurtado += que pode ser utilizado para concatenar strings.
+Existe também um operador de atribuição encurtado += que pode ser utilizado para concatenar strings.
 
 ```javascript
-var minhaString = "alfa";
-minhaString += "beto"; // vai ser guardado na variável minhaString o valor "alfabeto"
+var minhaString = "Alfa";
+minhaString += "beto"; // vai ser guardado na variável minhaString o valor "Alfabeto"
 ```
 
-## template string
-
-como visto acima que para concatenarmos uma string precisamos utilizar o sinal (+) e estaremos juntando uma string. Entretanto, é fortemente recomendado um outro método conhecido por _template string_, que funciona da seguinte forma:
+## Template string
+Como visto anteriormente, para concatenarmos uma string precisamos utilizar o sinal (`+`) e estaremos juntando uma string. Entretanto, é fortemente recomendado um outro método conhecido por _template string_, que funciona da seguinte forma:
 
 ```javascript
-const nome = "yago peixinho";
-console.log(`meu nome é ${nome}`);
+const nome = "Yago Peixinho";
+console.log(`Meu nome é ${nome}`);
 ```
 
-é nítido que dessa forma a nossa string se torna mais clara. Vamos ver detalhadamente o que aconteceu...
+É nítido que dessa forma a nossa string se torna mais clara. Vamos ver detalhadamente o que aconteceu...
 
 ```javascript
-const nome = "yago peixinho"; // aqui é declarado o valor do tipo Char em uma constante que possui o valor "yago peixinho"
+const nome = "Yago Peixinho"; //Aaqui é declarado o valor do tipo Char em uma constante que possui foi atribuído o valor "Yago Peixinho"
 
 console.log(
-  `meu nome é ${nome}`
-); /* utilizamos o acento grave (``) para determinarmos até aonde a nossa string vai.
-exemplo: (`o texto em string vai aqui dentro`).
+  `Meu nome é ${nome}`
+); /* Utilizamos o acento grave (``) para determinarmos até aonde a nossa string vai. (`o texto em string vai aqui dentro`).
 
 Para informarmos que queremos que o valor de alguma variável seja considerada, utilizamos o sinal do dólar ($) e cercamos a variável com chaves ({}).
 No exemplo é dado ${nome} - levando em conta que o valor dentro da variável será o valor a ser considerado. 
 
-Dessa forma será imprimido no console: meu nome é yago peixinho
+Dessa forma será imprimido no console: meu nome é Yago Peixinho
 
 */
 ```
 
 <br>
 
-# operador ternário
-
-o ternário condicional é o único operador JavaScript que utiliza três operandos. O operador pode ter um de dois valores baseados em uma condição. A sintaxe é:
+# Operador ternário
+O operador ternário condicional é o único operador JavaScript que utiliza três operandos. O operador pode ter um de dois valores baseados em uma condição. A sintaxe é:
 
 ```javascript
 var nomeVariavel = condicao ? valor1 : valor2;
 ```
 
-basicamente estamos informando que se a _condicao_ for verdadeira, a variável _nomeVariavel_ receberá o _valor1_, se for falsa, receberá o _valor2_.
+Basicamente estamos informando que se a `condicao` for verdadeira, a variável `nomeVariavel` receberá o `valor1`, se for falsa, receberá o `valor2`.
 
 ~~~javascript
-var status = idade >= 18 ? "adulto" : "menor de idade";
-console.log(nomeVariavel); // será imprimido no console: "é verdadeiro", pois a condição é verdadeira, logo o valor obtido é "é verdadeiro"
+var status = idade >= 18 ? "Adulto" : "Menor de idade";
 ~~~
 
-esta declaração atribui o valor "adulto" à variável status caso idade seja dezoito ou mais. Caso contrário, atribui o valor "menor de idade".
+Esta declaração atribui o valor `"Adulto"` à variável status caso idade seja dezoito ou mais. Caso contrário, atribui o valor `"menor de idade"`.
 
 <br>
 
-# operador unário
-o operador unário é uma operação realizada apenas com um operando. Por exemplo, o operador *delete* apaga um objeto, uma propriedade do objeto ou um determinado elemento em alguma posição específica de uma matriz.
+# Operador unário
+O operador unário é uma operação realizada apenas com um operando. Por exemplo, o operador `delete` apaga um objeto, uma propriedade do objeto ou um determinado elemento em alguma posição específica de uma matriz.
 
 ~~~javascript
 delete nomeObjeto;
@@ -260,52 +231,52 @@ delete nomeObjeto[indice];
 
 Caso o operador `delete` seja bem-sucedido, ele defina a propriedade ou elemento para `undefined`. O operador `delete` retorna verdadeiro se a operação foi possível e retorna falso caso a operação não for possível.
 
-##### exemplos retirados do [mnd web docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)
+##### _Exemplos retirados do [mnd web docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)_
 
 ~~~javascript
 x = 42; 
 var y = 43;
 
-delete x; // retorna true, pois pode ser apagado por ter sido declarada implicitamente
-delete y; // retorna false, pois não pode ser apagada por ter sido declarada implicitamente
+delete x; // Retorna true, pois pode ser apagado por ter sido declarada implicitamente
+delete y; // Retorna false, pois não pode ser apagada por ter sido declarada implicitamente
 ~~~
 
 ~~~javascript 
 meuObj = new Number();
-meuObj.h = 4; // cria  propriedade h
+meuObj.h = 4; // Cria  propriedade h
 
-delete meuObj.h; // retorna true, pois pode apagar as propriedades de um objeto definidas pelo usuário
-delete meuObj; // retorna true pois pode ser apagado por ter sido declarado implicitamente
+delete meuObj.h; // Retorna true, pois pode apagar as propriedades de um objeto definidas pelo usuário
+delete meuObj; // Retorna true pois pode ser apagado por ter sido declarado implicitamente
 ~~~
 
 ~~~javascript 
-delete Math.PI; // retorna false, pois não é possível apagarmos propriedades predefinidas
+delete Math.PI; // Retorna false, pois não é possível apagarmos propriedades predefinidas
 ~~~
 
-## apagando elementos do array
-a princípio é importante ressaltar que quando você apaga um elemento de um array, o tamanho do array não é afetado. Caso você apague o elemento `carros[4]`, o elemento `carros[4]` ainda permanecerá na mesma posição, tornando-se um elemento `undefined`. 
+## Apagando elementos do array
+A princípio é importante ressaltar que quando você apaga um elemento de um array, o tamanho do array não é afetado. Caso você apague o elemento `carros[4]`, o elemento `carros[4]` ainda permanecerá na mesma posição, tornando-se um elemento `undefined`. 
 
-quando é utilizado um `delete` em um elemento do array, aquele elemento é removido imediatamente no array e o valor daquele array que foi deletado é substituído para `undefined` e o valor continua sendo endereçável retornando `undefined` porém qualquer comparação com esse elemento deletado será considerada negativa.
+Quando é utilizado um `delete` em um elemento do array, aquele elemento é removido imediatamente no array e o valor daquele array que foi deletado é substituído para `undefined` e o valor continua sendo endereçável retornando `undefined` porém qualquer comparação com esse elemento deletado será considerada negativa.
 
 ~~~javascript
-var comidasFavoritas = new Array('pizza', 'hamburguer', 'batatas', 'chocolate');
+var comidasFavoritas = new Array('Pizza', 'Hamburguer', 'Batatas', 'Chocolate');
 
 delete comidasFavoritas[3];
 
 if(3 in comidasFavoritas){
-    // isto não será executado
+    // Isto não será executado
 }
 ~~~
 
-caso você queira que o elemento de um array exista mas não quer que ele tenha um valor definido, utilize `undefined` em vez do `delete`. Desse modo o elemento daquela matriz ainda existe, porém com um valor indefinido.
+Caso você queira que o elemento de um array exista mas não quer que ele tenha um valor definido, utilize `undefined` em vez do `delete`. Desse modo o elemento daquela matriz ainda existe, porém com um valor indefinido.
 
 ~~~javascript
-var comidasFavoritas = new Array('pizza', 'hamburguer', 'batatas', 'chocolate');
+var comidasFavoritas = new Array('Pizza', 'Hamburguer', 'Batatas', 'Chocolate');
 
 comidasFavoritas[3] = undefined;
 
 if(3 in comidasFavoritas){
-    // isto será executado
+    // Isto será executado
 }
 ~~~
 
@@ -335,7 +306,7 @@ if(3 in comidasFavoritas){
 </div>
 <div>
 
-#### referências desse documento
+#### Referências desse documento
 
 - https://developer.mozilla.org/pt-BR/
 - https://eloquentjavascript.net/
