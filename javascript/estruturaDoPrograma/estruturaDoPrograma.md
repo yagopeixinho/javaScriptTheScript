@@ -368,6 +368,24 @@ A palavra chave `continue` é similar ao `break` pois também é algo que influe
 <br>
 <br>
 
+# COMENTÁRIOS
+Durante a codificação, muitas vezes o código em si não transmite todas as informações necessárias ou a informação é transmitida de forma tão enigmática que é impossível um ser humano (às vezes até quem mesmo criou o código) entender. Nessas ou em outras ocasiões podemos utilizar os comentários para isso.
+
+O comentário em um código é um pedaço que o interpretador JavaScript ignora. No JavaScript temos duas maneiras de escrever comentários. 
+- Podemos escrever os comentários em uma única linha
+- Podemos escrever os comentários em mútiplas linhas
+
+Para escrevermos o comentário em uma única linha utilizamos dois caracteres barra (`//`) e após a barra digitamos o comentário. 
+
+~~~javascript
+// Isso é um comentário e será ignorado pelo interpretador JavaScript
+~~~
+~~~javascript
+// Essa variável recebe o resultado da equação
+var resultadoDaEquacao = calcularEquacao(1, 2);
+~~~
+
+Nos blocos de código acima percebemos nitidamente os comentários selecionado 
 
 ---
 
