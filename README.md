@@ -41,7 +41,7 @@ Esse projeto tem iniciativa de um estudante de tecnologia que sentiu a necessida
 <br>
 
 # NOTAS DO PROJETO
-Esse projeto está em constante desenvolvimento, a medida em que eu vou estudando vou atualizando esse repositório. Caso encontrem erros de português ou alguma incoerência lógica, por favor, me notifiquem com um e-mail ou pelas minhas redes sociais que podem ser encontradas [clicando aqui](#https://beacons.ai/yagopeixinho). Também estou aberto para ajudar quem desejar com dúvidas e recebo sugestões de melhorias.
+Esse projeto está em constante desenvolvimento, a medida em que eu vou estudando vou atualizando esse repositório. Caso encontrem erros de português ou alguma incoerência lógica, por favor, me notifiquem com um e-mail ou pelas minhas redes sociais que podem ser encontradas [clicando aqui](https://beacons.ai/yagopeixinho). Também estou aberto para ajudar quem desejar com dúvidas e recebo sugestões de melhorias.
 
 <br>
 
