@@ -169,6 +169,8 @@ Para chamar uma função basta utilizar os parênteses depois da expressão que 
 # FLUXO DE CONTROLE
 Em um programa que possui mais que uma declaração, as declarações são executadas de cima para baixo. Por exemplo
 
+<br>
+
 ## FLUXO DE CONTROLE EM LINHA RETA
 
 ```javascript
@@ -187,9 +189,9 @@ o exemplo utilizado é um exemplo válido, pois como dito anteriormente, a leitu
 <br>
 
 
-## EXECUÇÃO CONDICIONAL
+# EXECUÇÃO CONDICIONAL
 
-### IF / ELSE
+## IF / ELSE
 Além do fluxo de controle em linha reta, temos também a _execução condicional_, onde escolhemos entre duas rotas diferentes baseadas em um valor lógico (booleano):
 
 ![linhaReta](assets/images/controleCondicionalExemplo.png)
@@ -244,7 +246,7 @@ Seguindo essa lógica, o programa irá verificar se a variável `num` é inferio
 
 <br>
 
-### SWITCH
+## SWITCH
 Além do comando de execução condicional `if`, temos outro comando de execução condicional no JavaScript que herdou uma sintaxe da mesma linha das linguagens de programação _C_ e _Java_.
 
 ~~~javascript
