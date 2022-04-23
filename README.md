@@ -12,39 +12,53 @@
 __JavaScript Script__ é um roteiro de estudo da linguagem de programação JavaScript recomendado para todos os níveis de programadores.
 
 <br>
+</div>
 
-## POR QUE ESSE PROJETO EXISTE?
+
+<div align="center">
+
+# POR QUE ESSE PROJETO EXISTE?
 Esse projeto tem iniciativa de um estudante de tecnologia que sentiu a necessidade de fazer anotações sobre a linguagem JavaScript, entretanto, o principal aspecto é a divulgação do documento para que outros programadores consigam ter acesso de forma organizada as informações da linguagem JavaScript.
 
 <br>
+</div>
 
-## MEDIA
+<div align="center">
 
- <img src="images/readme-images/fisher1.png">
+# MEDIA
 
-<img src="https://media3.giphy.com/media/PmftSuFct0bWwVK7O6/giphy.gif?cid=790b7611ac1ca4b578b1acb0964f21bc48eb4a8aa784460d&rid=giphy.gif&ct=g" width="49.7%">
-<img src="https://media1.giphy.com/media/vOx9UYt8kzUmEtOc1i/giphy.gif?cid=790b76115d61ce5abc27dd15c750c4a8a54a0bcba32a2f4e&rid=giphy.gif&ct=g" width="49.7%">
+<img src="assets/images/responsividadeReadme.jpg">
 
+</div>
 
-## CONTACT
- </div>
+<br>
+
+<div align="center">
+
+# RECOMENDAÇÕES
+
+</div>
+
+- É fortemente recomendado que você possua conhecimento mínimo em lógica de programação ou conhecimento básico da linguagem JavaScript antes de ler esse documento
+- Esse documento pode ser lido com qualidade (e facilidade) em seus dispositivos móveis como smarthphone ou tablets
+- Para acessar os documentos e ler os documentos basta 
+
+<br>
+
+<div align="center">
+
+# CONTATO
  
- If you liked the project or have any constructive criticism related to the project or want to get in touch for some other reason or just want to help the developers and the project, here are some options:
-	
-- 🌎 Share this repository with your friends!
-- ⭐ If you liked the idea, you can give it a fork and a star.
-- 📬 Email the developments if you need something: peixinhoyago@gmail.com
+</div>
+
+Se você gostou do projeto ou tem alguma crítica construtiva em relação ao projeto ou quer entrar em contato por qualquer outro motivo ou só quer ajudar de alguma forma o projeto, abaixo tem algumas opções:
+- 🌎 Compartilhe esse repositório com seus amigos :D
+- ⭐ Se gostou da ideia você pode fazer um fork ou favoritar o projeto
+- 📬 Me envie um e-mail caso você precise de algo: peixinhoyago@gmail.com
  
- <div align="center">
 
 
 
 
 
 
-
-
-
-
-
-</dvi>

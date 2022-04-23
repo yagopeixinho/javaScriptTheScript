@@ -1,5 +1,5 @@
 <div class="header">
-    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" width="100"/> Operadores | Yago Peixinho
+    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" width="100"/> JavaScript Script | Operadores
 </div>
 
 ---
@@ -10,7 +10,7 @@
 
 <br>
 
-# Operadores em JavaScript
+# OPERADORES EM JAVASCRIPT
 - [Operadores de atribuição](#operadores-de-atribuição)
 - [Operadores de comparação](#operadores-de-comparação)
 - [Operadores aritméticos](#operadores-aritméticos)
@@ -23,10 +23,10 @@
 
 Primeiramente, é importante ressaltar que o JavaScript possui tantos operadores _binários_ quanto _urinários_ e um operador ternário que é o condicional.
 
-
+<br>
 <br>
 
-# Operadores de atribuição
+# OPERADORES DE ATRIBUIÇÃO
 Um operador de atribuição atribui um valor ao operando à sua esquerda baseado no valor do operando à sua direita. No javaScript (e em muitas outras linguagens) utilizamos o "`=`". O "`=`" atribui o valor do operando à direita ao operando à esquerda. Isto é: `x = y` atribui o valor de `y` a `x`.
 
 | Nome                                                       | Operador encurtado | Significado  |
@@ -46,8 +46,9 @@ Um operador de atribuição atribui um valor ao operando à sua esquerda baseado
 | Atribuição OR bit-a-bit                                    | x \|= y            | x = x \| y   |
 
 <br>
+<br>
 
-# Operadores de comparação
+# OPERADORES DE COMPARAÇÃO
 Um operador de comparação compara seus operandos e retorna um valor lógico `true` ou `false` baseado em se a comparação é verdadeira. As comparações são feitas baseadas em tipos númericos, lógicos, objetos ou strings. no JavaScript as strings são comparadas _com base em ordenação lexográfica utilizando os valores Unicode_. Quando você compara dois operando que não são do mesmo tipo, o JavaScript tenta converter para um tipo apropriado. É importante ressaltar que as únicas exceções a esta regras são os operadores === e o !==. Esses operadores verificam se os operandos são idênticos. Ou seja, não há uma tentativa de converter os operando em outros tipos compatíveis antes de verificar se são iguais.
 
 | Operador                     | Descrição                                                                                                           | Exemplos que retornam verdadeiro   |
@@ -62,8 +63,9 @@ Um operador de comparação compara seus operandos e retorna um valor lógico `t
 | Menor que ou igual (<=)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                   | var1 <= var2<br> var2 <= 5         |
 
 <br>
+<br>
 
-# Operadores aritméticos
+# OPERADORES ARITMÉTICOS
 Os operadores aritméticos padrões são:
 
 - Soma (`+`)
@@ -92,8 +94,9 @@ Para complementar às operações aritméticas padrões (` +, -, \*, / `), o Jav
 | Operador de <br>exponenciação (\*\*) | Calcula a base elevada á potência do expoente, que é, base expoente                                                                                                                                                                  | 2 ** 3 retorna 8.<br> <br>10 ** -1 retorna 0.1                                                             |
 
 <br>
+<br>
 
-# Operadores lógicos
+# OPERADORES LÓGICOS
 Operadores lógicos são utilizados tipicamente com valores booleanos (lógicos);
 
 | Operador         | Utilização       | Descrição                                                                                                                                                                                                                                           |
@@ -106,8 +109,8 @@ Outro exemplo de valores que podem ser considerados como `falso` são aqueles va
 
 <br>
 
-## Exemplos práticos
-##### _exemplos retirados do [mnd web docs](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)_
+## EXEMPLOS PRÁTICOS
+###### EXEMPLOS RETIRADOS DO [MND WEB DOCS](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)
 ---
 
 #### O código a seguir mostra exemplos do operador && (E lógico).
@@ -144,7 +147,7 @@ var n3 = !"Gato"; // !t retorna false
 
 <br>
 
-## Avaliação curto-circuito
+## AVALIAÇÃO CURTO-CIRCUITO
 
 As expressão lógicas são testadas pelo valor iniciado da esquerda para a direita. Desse modo, é possível fazer um teste chamado "curto-circuito", utilizando as seguintes regras:
 
@@ -154,8 +157,9 @@ As expressão lógicas são testadas pelo valor iniciado da esquerda para a dire
 Desse modo é possível verificarmos se as regras da lógica avaliada estão corretas, pois, analisando que a parte `qualquercoisa` das expressões acima não são avaliadas de forma que qualquer nova lógica implementada após não produzirá efeito nenhum.
 
 <br>
+<br>
 
-# Operadores de string
+# OPERADORES DE STRING
 Além dos operadores de comparação, que podem ser utilizados em valores String, o operador de _concatenação_ (`+`) concatena dois valores string, retornando outra string que é a união dos dois operandos.
 
 ```javascript
@@ -174,7 +178,9 @@ var minhaString = "Alfa";
 minhaString += "beto"; // vai ser guardado na variável minhaString o valor "Alfabeto"
 ```
 
-## Template string
+<br>
+
+## TEMPLATE STRING
 Como visto anteriormente, para concatenarmos uma string precisamos utilizar o sinal (`+`) e estaremos juntando uma string. Entretanto, é fortemente recomendado um outro método conhecido por _template string_, que funciona da seguinte forma:
 
 ```javascript
@@ -200,8 +206,9 @@ Dessa forma será imprimido no console: meu nome é Yago Peixinho
 ```
 
 <br>
+<br>
 
-# Operador ternário
+# OPERADOR TERNÁRIO
 O operador ternário condicional é o único operador JavaScript que utiliza três operandos. O operador pode ter um de dois valores baseados em uma condição. A sintaxe é:
 
 ```javascript
@@ -217,8 +224,9 @@ var status = idade >= 18 ? "Adulto" : "Menor de idade";
 Esta declaração atribui o valor `"Adulto"` à variável status caso idade seja dezoito ou mais. Caso contrário, atribui o valor `"menor de idade"`.
 
 <br>
+<br>
 
-# Operador unário
+# OPERADOR UNÁRIO
 O operador unário é uma operação realizada apenas com um operando. Por exemplo, o operador `delete` apaga um objeto, uma propriedade do objeto ou um determinado elemento em alguma posição específica de uma matriz.
 
 ~~~javascript
@@ -253,7 +261,9 @@ delete meuObj; // Retorna true pois pode ser apagado por ter sido declarado impl
 delete Math.PI; // Retorna false, pois não é possível apagarmos propriedades predefinidas
 ~~~
 
-## Apagando elementos do array
+<br>
+
+## APAGANDO ELEMENTO DOS ARRAYS
 A princípio é importante ressaltar que quando você apaga um elemento de um array, o tamanho do array não é afetado. Caso você apague o elemento `carros[4]`, o elemento `carros[4]` ainda permanecerá na mesma posição, tornando-se um elemento `undefined`. 
 
 Quando é utilizado um `delete` em um elemento do array, aquele elemento é removido imediatamente no array e o valor daquele array que foi deletado é substituído para `undefined` e o valor continua sendo endereçável retornando `undefined` porém qualquer comparação com esse elemento deletado será considerada negativa.
@@ -281,13 +291,15 @@ if(3 in comidasFavoritas){
 ~~~
 
 
-
-
 <br>
 <br>
 <br>
 
----
+<div align="center">
+
+# AUTOR
+
+</div>
 
 <div class="footer">
     <table align="center">
@@ -306,8 +318,7 @@ if(3 in comidasFavoritas){
 </div>
 <div>
 
-#### Referências desse documento
-
+###### REFERÊNCIAS DESSE DOCUMENTO
 - https://developer.mozilla.org/pt-BR/
 - https://eloquentjavascript.net/
 

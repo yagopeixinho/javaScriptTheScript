@@ -1,5 +1,5 @@
 <div class="header">
-    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" width="100"/> Valores | Yago Peixinho
+    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" width="100"/> JavaScript Script | Valores
 </div>
 
 ---
@@ -10,7 +10,7 @@
 
 <br>
 
-# Valores em JavaScript
+# VALORES EM JAVASCRIPT
 - [Números](#operadores-em-javascript)
 - [Strings](#strings)
 - [Booleanos](#valores-booleanos)
@@ -19,8 +19,9 @@
 Existem seis tipos básicos de valores no JavaScript: _números, Strings, Booleanos, objetos, funções e valores indefinidos_. Quando você desejar criar um valor você só precisa invocar o nome do seu valor; É claro que não são criados do nada, todo valor precisa estar armazenado em algum lugar e se você quiser utilizar uma quantidade enorme dele pode acabar ficando sem bits. Porém é importante ressaltar que a medida em que você não utiliza um valor ele será dissipado, fazendo com que seus bits sejam reciclados e disponibilziando-os para serem usados nas contruções de outros valores.
 
 <br>
+<br>
 
-# Números
+# NÚMEROS
 
 Os valores de tipo _número_ em um programa são escritos assim:
 
@@ -30,7 +31,9 @@ Os valores de tipo _número_ em um programa são escritos assim:
 
 Colocar esse valor em um programa fará com que os padrões de bits referente ao número 13 sejam criados e passem a existir na memória do computador.
 
-## Números fracionais
+<br>
+
+## NÚMEROS FRACIONAIS
 
 Números fracionais são escritos utilizando um ponto
 
@@ -44,7 +47,10 @@ Para números muitos grandes ou pequenos você pode utilziar a notação cientí
 2.9998e8;
 ```
 
-## Números especiais
+<br>
+
+
+## NÚMEROS ESPECIAIS
 
 No JavaScript podemos encontrar três valores especiais que são considerados números mas não se comportam como números normais.
 
@@ -53,8 +59,10 @@ No JavaScript podemos encontrar três valores especiais que são considerados n�
 `NaN` é a abreviação de _"not a number"_, mesmo sendo um valor do tipo número, esse valor é recebido como resultado quando, por exemplo, tentar calcular `0/0` ou `Infinity - Infinity` ou então realizar quaisquer outras operações numéricas que não resultem em um número preciso e significativo.
 
 <br>
+<br>
 
-# Strings
+
+# STRING
 As Strings são utilizadas para representar textos seu conteúdo é declarado utilizando aspas simples ou duplas, o seu conteúdo vai entre elas; é importante ressaltar que a aspa inicial e final devem ser idênticas, portanto se você iniciou uma string com (`"`), o final da sua `String` deve conter (`"`) também. 
 
 ~~~javascript
@@ -62,7 +70,7 @@ As Strings são utilizadas para representar textos seu conteúdo é declarado ut
 'Eu também sou uma string, porém com aspas simples'
 ~~~
 
-### Newlines
+### NEWLINES
 No JavaScript uma grande parte dos valores podem ser colocados entre aspas de modo em que o JavaScript transformará esse elemento um valor do tipo `String`. Desse modo, imagine que queremos colocar aspas dentro de aspas? De qualquer modo, os caracteres _newlines_ (quebra de linhas quando pressionamos a tecla _Enter_) também não pode ser utilizada dentro de uma `String`.
 > As Strings devem permanecer em linha única!
 
@@ -73,11 +81,13 @@ Toda vez que um caractere de barra invertida `\` for encontrada dentro de uma `S
 <br>
 
 
-# Valores Booleanos
+# VALORES BOOLEANOS
 Na programação, frequentemente precisamos utilizar um valor que possa nos ajudar a distinguir entre duas possibilidades.
 
-## Comparações
-eEssa é uma maneira de produzir valores booleanos:
+<br>
+
+## COMPARAÇÕES
+Essa é uma maneira de produzir valores booleanos:
 
 ~~~javascript
 console.log(3 > 2)
@@ -99,16 +109,18 @@ console.log(NaN == NaN)
 
 <br>
 
-# Valores indefinidos
+# VALORES INDEFINIDOS
 No JavaScript é muito comum nos depararmos com os valores `null` e `undefined`. O valor `undefined` é geralmente utilizado quando uma variável não possui nenhum valor, o `null` é utilizado quando queremos intencionalmente definir que existe a ausência de qualquer valor em determinada variável.
 
 
 <br>
 <br>
-<br>
-<br>
 
----
+<div align="center">
+
+# AUTOR
+
+</div>
 
 <div class="footer">
     <table align="center">
@@ -127,7 +139,7 @@ No JavaScript é muito comum nos depararmos com os valores `null` e `undefined`.
 </div>
 <div>
 
-#### Referências nesse documento
+###### REFERÊNCIAS DESSE DOCUMENTO
 - https://developer.mozilla.org/pt-BR/
 - https://eloquentjavascript.net/
 
