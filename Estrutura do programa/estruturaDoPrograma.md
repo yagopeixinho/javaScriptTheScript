@@ -125,7 +125,7 @@ No bloco visto anteriormente, o valor da variável `var luzes` foi definido aind
 > Você deve imaginar variáveis como tentáculos, ao invés de caixas. Elas não contêm valores; elas os agarram - duas variáveis podem referenciar o mesmo valor. Somente os valores que o programa mantém tem o poder de ser acessado por ele. Quando você precisa se lembrar de algo, você aumenta o tentáculo para segurar ou recoloca um de seus tentáculos existentes para fazer isso.
 > Quando você define uma variável sem fornecer um valor a ela, o tentáculo fica conceitualmente no ar - ele não tem nada para segurar. Quando você pergunta por um valor em um lugar vazio, você recebe o valor `undefined`.
 
-![polvo](assets/images/polvoAnalogiaVariavel.jpg)
+![polvo](./../assets/images/polvoAnalogiaVariavel.jpg)
 ###### Exemplo retirado do livro Eloquente JavaScript traduzido em português retirados do GitHub - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
 
 <br>
@@ -182,7 +182,7 @@ console.log(numeroPar + numeroImpar);
 
 o exemplo utilizado é um exemplo válido, pois como dito anteriormente, a leitura do código é feito de cima para baixo, tendo como último comando o `console.log` que retorna a soma do `numeroPar` e `numeroImpar`. A representação desse fluxo seria uma linha reta:
 
-![linhaReta](assets/images/linhaRetaExemploFluxoReto.png)
+![linhaReta](./../assets/images/linhaRetaExemploFluxoReto.png)
 ###### Exemplo retirado do livro Eloquente JavaScript traduzido em português retirados do GitHub - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
 
 <br>
@@ -194,7 +194,7 @@ o exemplo utilizado é um exemplo válido, pois como dito anteriormente, a leitu
 ## IF / ELSE
 Além do fluxo de controle em linha reta, temos também a _execução condicional_, onde escolhemos entre duas rotas diferentes baseadas em um valor lógico (booleano):
 
-![linhaReta](assets/images/controleCondicionalExemplo.png)
+![Controle condicional](../assets/images/controleCondicionalExemplo.png)
 ###### Exemplo retirado do livro Eloquente JavaScript traduzido em português retirados do GitHub - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
 
 <br>
@@ -241,7 +241,7 @@ if (num < 10) {
 
 Seguindo essa lógica, o programa irá verificar se a variável `num` é inferior a 10, se for, chama a função `alert("pequeno")` e termina a sua execução. Se não for, ele irá entrar no segundo teste que é `if(num < 100)` e caso seja verdadeiro, o número está entre 10 e 100 e a função `alert("medio")` será mostrado. Caso contrário, o segundo e último else será escolhido.
 
-![linhaReta](assets/images/controleCondicionalElseIf.png)
+![Controle condicional Else If](../assets/images/controleCondicionalElseIf.png)
 ###### Exemplo retirado do livro Eloquente JavaScript traduzido em português retirados do GitHub - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
 
 <br>
@@ -298,7 +298,7 @@ console.log(12);
 
 Entretanto, fazermos isso dessa forma (além de trabalhoso caso seja necessário chegarmos até número grandes) é deselegante. Pensando nisso surgiram os _loops_ de repetição.
 
-![linhaReta](assets/images/loopsDeRepeticao.png)
+![Loops de repetição](../assets/images/loopsDeRepeticao.png)
 ###### Exemplo retirado do livro Eloquente JavaScript traduzido em português retirados do GitHub - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
 
 <br>
