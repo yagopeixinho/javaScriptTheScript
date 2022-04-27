@@ -15,7 +15,6 @@
 - [Ponto e vírgula](#ponto-e-vírgula)
 - [Variáveis](#variáveis)
 - [Palavra-chaves e palavras reservadas](#palavras-chave-e-palavras-reservadas)
-- [Funções](#funções)
 - [Fluxo de controle](#fluxo-de-controle)
 - [Estrutura de repetição](#estrutura-de-repetição)
 
@@ -148,20 +147,6 @@ Algumas palavras tem significados especiais, um exemplo é a palavra `var`, que 
 > `break` `catch` `this` `with` `void` `while` `static` `swtich` `try` `typeof` `private` `yield` `instanceof` `let` `const`
 
 É importante ressaltar que não é extremamente importante memorizar as palavras reservadas, pois existem várias e futuramente novas podem vir a surgir. Lembre-se que este pode ser um problema caso algo não funcionar como esperado.
-
-<br>
-<br>
-
-# FUNÇÕES
-Uma função é um pedaço de programa envolvido por um valor que pode ser aplicado para executar alguma funcionalidade. O `alert`, por exemplo, é uma função que tem como objetivo mostrar uma pequena caixa de diálogo com uma mensagem.
-
-```javascript
-alert("hello, world!");
-```
-
-Quando você utiliza uma função, você está _chamando_, _invocando_ ou _aplicando_ uma função.
-
-Para chamar uma função basta utilizar os parênteses depois da expressão que produz um valor de função. No exemplo que foi mostrado a função `alert` utilizou os parênteses para ser chamada e dentro dele é perceptível que temos uma `string` escrita `"hello, world!"`, que aparece na chamada do diálogo. Os valores dentro da função (dentro dos parênteses) são chamados de _arguments_ (argumentos). A função `alert` utiliza apenas um argumento e outras funções utilizam diferentes valores.
 
 <br>
 <br>
