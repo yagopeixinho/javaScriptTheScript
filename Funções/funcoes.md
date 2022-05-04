@@ -159,6 +159,19 @@ O conjunto de ligações visíveis dentro de um bloco é determinado pelo lugar 
 <br>
 <br>
 
+# NOTAÇÃO POR DECLARAÇÃO
+Existe uma maneira mais simples de definir uma função no JavaScript. Em vez declarar: `var quadrado = function...`. A palavra-chave `function` também pode ser utilizada no início da declaração...
+
+~~~JavaScript
+function quadrado(x){
+    return x * x;
+}
+~~~
+
+Definimos a variável `quadrado` e fazemos com que ela referêncie a função em questão, entretanto, é importante ressaltar que existe uma pequena diferença entre essas declarações. Quando declaramos uma função dessa forma, 
+
+
+
 <div align="center">
 
 # AUTOR
