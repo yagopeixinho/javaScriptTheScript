@@ -86,7 +86,7 @@ console.log(x + z);
 
 No exemplo anterior, vemos que o `console.log` fora da estrutura condicional (`if/else`) retorna o valor 31. Caso declararmos `console.log(x + z + y)`, haveria um erro pois o a variável `y`, que é um let, existe apenas dentro do escopo local. É importante ressaltar que esse comportamento em funções **não se repete**. Caso tentarmos utilizar qualquer variável declarada localmente na função não existiria no escopo global.
 
-~~~JavaScript
+```JavaScript
 let x = 21;
 
 var soma = function soma(){
@@ -102,11 +102,11 @@ var soma = function soma(){
 
 console.log(x);
 // -> 21
-~~~
+```
 
 Caso tentarmos imprimir a variável `y` ou `z`, da seguinte forma:
 
-~~~JavaScript
+```JavaScript
 let x = 21;
 
 var soma = function soma(){
@@ -122,10 +122,38 @@ var soma = function soma(){
 
 console.log(x + y);
 // -> ReferenceError: y is not defined
-~~~
+```
 
 Esse erro acontece pois a variável `y` não foi definida no escopo global, somente no escopo local da função.
 
+<br>
+<br>
+
+# ESCOPO ANINHADO
+
+O JavaScript não distingue apenas escopos globais e locais de variáveis. Blocos e funções possuem o mesmo comportamento. Funções podem ser criadas dentro de funções, produzindo múltiplos graus de localidade.
+
+###### Exemplo retirado do livro Eloquente JavaScript. Para ver essas informações [clique aqui](https://eloquentjavascript.net/03_functions.html).
+
+```javascript
+const receita = function (fator) {
+  const ingrediente = function (quantidade, unidade, nome) {
+    let ingredienteQuantidade = quantidade * fator;
+    if (ingredienteQuantidade > 1) {
+      unidade += "s";
+    }
+    console.log(`${ingredienteQuantidade} ${unidade} ${nome}`);
+  };
+  ingrediente(1, "xícara", "leite");
+  ingrediente(0.25, "colher", "sal");
+  ingrediente(0.25, "copo", "suco de limão");
+  ingrediente(1, "colher de chá", "pimenta");
+};
+```
+
+O código anterior a função `ingrediente` pode ver o parâmetro `fator` da função `receita`. Mas é um escopo local, que como as variáveis `ingredienteQuantidade` ou `unidade` não são visíveis na outra função.
+
+O conjunto de ligações visíveis dentro de um bloco é determinado pelo lugar desse bloco no texto do programa. Cada escopo local também pode ver todos os escopos locais que o contêm e todos os escopos podem ver o escopo global. Essa abordagem para a visibilidade de vinculação é chamada de _escopo léxico_.
 
 
 <br>
