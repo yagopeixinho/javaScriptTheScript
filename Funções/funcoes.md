@@ -14,6 +14,12 @@
 
 - [O que são funções?](#o-que-são-funções)
 - [Definindo uma função](#definindo-uma-função)
+- [Parâmetros e escopo](#parâmetros-e-escopo)
+- [Escopo aninhado](#escopo-aninhado)
+- [Notação por declaração](#notação-por-declaração)
+- [Arrow functions](#arrow-functions)
+- [Pilha de chamadas](#pilha-de-chamadas)
+
 
 Funções são blocos fundamentais; Funções é um conjunto de instrução que executa um processamento e executa um conjunto de instruções. Podemos, por exemplo, criarmos uma função que calcula a média de uma turma e nos retorna um resultado.
 
