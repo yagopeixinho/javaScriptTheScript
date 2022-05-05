@@ -159,6 +159,46 @@ O conjunto de ligações visíveis dentro de um bloco é determinado pelo lugar 
 <br>
 <br>
 
+# ARROW FUNCTIONS
+Uma outra forma de declararmos funções é a  _arrow function_. A _arrow function_ é declarada de forma diferente. Em vez de usarmos a palavra `function`, utilizamos uma flecha `=>` feito com o _sinal de igual_ `=` e _maior que_ `>`.
+
+~~~javascript
+const poder = (base, expoente) => {
+  let resultado = 1;
+  for(let contador = 0; contador < expoente; countador++){
+    resultado *= base;
+  }
+  return resultado;
+}
+~~~
+
+Nas arrow functions, a flecha vem depois dos parâmetros seguindo do bloco da função: `() => {}`
+
+Quando existe somente um parâmetro, o parêntese pode ser omitido. Caso o conteúdo dentro do corpo da função seja uma expressão sozinha em vez de envolver o bloco em chaves, você pode escrever somente a expressão sem necessidade do `return`.
+
+~~~javascript
+const retangulo1 = (x) => {return x * x};
+const retangulo2 = x => x * x;
+~~~
+
+Quando estamos definindo uma _arrow function_ e não queremos nenhum parâmetro, basta declarar a função com o parêntese vazio, como no exemplo abaixo:
+
+~~~javascript
+const elefante = () => {
+  console.log("Elefante tem tombra!");
+}
+~~~
+
+<br>
+<br>
+
+# PILHA DE CHAMADAS
+
+
+
+<br>
+<br>
+
 <div align="center">
 
 # AUTOR
