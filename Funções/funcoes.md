@@ -155,65 +155,102 @@ O código anterior a função `ingrediente` pode ver o parâmetro `fator` da fun
 
 O conjunto de ligações visíveis dentro de um bloco é determinado pelo lugar desse bloco no texto do programa. Cada escopo local também pode ver todos os escopos locais que o contêm e todos os escopos podem ver o escopo global. Essa abordagem para a visibilidade de vinculação é chamada de _escopo léxico_.
 
-
 <br>
 <br>
 
 # NOTAÇÃO POR DECLARAÇÃO
+
 Existe uma maneira mais simples de definir uma função no JavaScript. Em vez declarar: `var quadrado = function...`. A palavra-chave `function` também pode ser utilizada no início da declaração...
 
-~~~JavaScript
+```JavaScript
 function quadrado(x){
     return x * x;
 }
-~~~
+```
 
-Definimos a variável `quadrado` e fazemos com que ela referêncie a função em questão, entretanto, é importante ressaltar que existe uma pequena diferença entre essas declarações. Quando declaramos uma função dessa forma, 
+Definimos a variável `quadrado` e fazemos com que ela referêncie a função em questão, entretanto, é importante ressaltar que existe uma pequena diferença entre essas declarações. Quando declaramos uma função dessa forma,
 
 <br>
 
 # ARROW FUNCTIONS
-Uma outra forma de declararmos funções é a  _arrow function_. A _arrow function_ é declarada de forma diferente. Em vez de usarmos a palavra `function`, utilizamos uma flecha `=>` feito com o _sinal de igual_ `=` e _maior que_ `>`.
 
-~~~javascript
+Uma outra forma de declararmos funções é a _arrow function_. A _arrow function_ é declarada de forma diferente. Em vez de usarmos a palavra `function`, utilizamos uma flecha `=>` feito com o _sinal de igual_ `=` e _maior que_ `>`.
+
+```javascript
 const poder = (base, expoente) => {
   let resultado = 1;
-  for(let contador = 0; contador < expoente; countador++){
+  for (let contador = 0; contador < expoente; countador++) {
     resultado *= base;
   }
   return resultado;
-}
-~~~
+};
+```
 
 Nas arrow functions, a flecha vem depois dos parâmetros seguindo do bloco da função: `() => {}`
 
 Quando existe somente um parâmetro, o parêntese pode ser omitido. Caso o conteúdo dentro do corpo da função seja uma expressão sozinha em vez de envolver o bloco em chaves, você pode escrever somente a expressão sem necessidade do `return`.
 
-~~~javascript
-const retangulo1 = (x) => {return x * x};
-const retangulo2 = x => x * x;
-~~~
+```javascript
+const retangulo1 = (x) => {
+  return x * x;
+};
+const retangulo2 = (x) => x * x;
+```
 
 Quando estamos definindo uma _arrow function_ e não queremos nenhum parâmetro, basta declarar a função com o parêntese vazio, como no exemplo abaixo:
 
-~~~javascript
+```javascript
 const elefante = () => {
   console.log("Elefante tem tombra!");
-}
-~~~
+};
+```
 
 <br>
 <br>
 
 # PILHA DE CHAMADAS
 
+É importante entedermos como funciona o fluxo de controle flui por meio das execuções das funções. Veremos abaixo um simples programa realizando algumas chamadas de funções:
 
+```javascript
+function diaAtual(dia){
+  console.log(`Hoje é:` ${dia});
+}
+diaAtual("Segunda-feira");
+console.log("Tenha um bom dia!");
+```
+
+A função anterior funciona dessa forma:
+
+- A chamada da função `diaAtual` faz com que o controle pule para o início dessa função (linha 1);
+- Após a chamada da função `diaAtual`, é invocado o `console.log`, que assume o controle e faz o seu trabalho;
+- O controle chega ao fim da função `diaAtual` e retorna para o local onde a função foi invocada originalmente (linha 3);
+- Por fim, finalmente o controle executa o `console.log("Tenha um bom dia!)`
+
+<br>
+
+###### Abaixo teremos um exemplol retirado do livro Eloquente JavaScript traduzido em português retirados do GitHub - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
+
+
+> Devido ao fato de que a função deve retornar ao local onde foi chamada após finalizar a sua execução, o computador precisa se lembrar do contexto no qual a função foi invocada originalmente. Em um dos casos, console.log retorna o controle para a função greet. No outro caso, ela retorna para o final do programa.
+>
+> O local onde o computador armazena esse contexto é chamado de call stack (pilha de chamadas). Toda vez que uma função é invocada, o contexto atual é colocado no topo dessa "pilha" de contextos. Quando a função finaliza sua execução, o contexto no topo da pilha é removido e utilizado para continuar o fluxo de execução.
+>
+> O armazenamento dessa pilha de contextos necessita de espaço na memória do computador. Quando a pilha começar a ficar muito grande, o computador reclamará com uma mensagem do tipo out of stack space (sem espaço na pilha) ou too much recursion (muitas recursões). O código a seguir demonstra esse problema fazendo uma pergunta muito difícil para o computador, que resultará em um ciclo infinito de chamadas entre duas funções. Se o computador tivesse uma pilha de tamanho infinito, isso poderia ser possível, no entanto, eventualmente chegaremos ao limite de espaço e explodiremos a "pilha".
+
+```javascript
+function chicken() {
+  return egg();
+}
+function egg() {
+  return chicken();
+}
+console.log(chicken() + " came first.");
+// → ??
+```
 
 <br>
 <br>
-
-
-
 
 <div align="center">
 
