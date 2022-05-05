@@ -159,6 +159,19 @@ O conjunto de ligações visíveis dentro de um bloco é determinado pelo lugar 
 <br>
 <br>
 
+# NOTAÇÃO POR DECLARAÇÃO
+Existe uma maneira mais simples de definir uma função no JavaScript. Em vez declarar: `var quadrado = function...`. A palavra-chave `function` também pode ser utilizada no início da declaração...
+
+~~~JavaScript
+function quadrado(x){
+    return x * x;
+}
+~~~
+
+Definimos a variável `quadrado` e fazemos com que ela referêncie a função em questão, entretanto, é importante ressaltar que existe uma pequena diferença entre essas declarações. Quando declaramos uma função dessa forma, 
+
+<br>
+
 # ARROW FUNCTIONS
 Uma outra forma de declararmos funções é a  _arrow function_. A _arrow function_ é declarada de forma diferente. Em vez de usarmos a palavra `function`, utilizamos uma flecha `=>` feito com o _sinal de igual_ `=` e _maior que_ `>`.
 
@@ -198,6 +211,9 @@ const elefante = () => {
 
 <br>
 <br>
+
+
+
 
 <div align="center">
 
