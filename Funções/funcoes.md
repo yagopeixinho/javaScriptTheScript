@@ -19,7 +19,7 @@
 - [Notação por declaração](#notação-por-declaração)
 - [Arrow functions](#arrow-functions)
 - [Pilha de chamadas](#pilha-de-chamadas)
-
+- [Argumentos opcionais](#argumentos-opcionais)
 
 Funções são blocos fundamentais; Funções é um conjunto de instrução que executa um processamento e executa um conjunto de instruções. Podemos, por exemplo, criarmos uma função que calcula a média de uma turma e nos retorna um resultado.
 
@@ -235,8 +235,7 @@ A função anterior funciona dessa forma:
 
 <br>
 
-###### Abaixo teremos um exemplol retirado do livro Eloquente JavaScript traduzido em português retirados do GitHub - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
-
+###### Abaixo teremos um exemplo retirado do livro Eloquente JavaScript traduzido em português retirados do GitHub - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
 
 > Devido ao fato de que a função deve retornar ao local onde foi chamada após finalizar a sua execução, o computador precisa se lembrar do contexto no qual a função foi invocada originalmente. Em um dos casos, console.log retorna o controle para a função greet. No outro caso, ela retorna para o final do programa.
 >
@@ -257,6 +256,50 @@ console.log(chicken() + " came first.");
 
 <br>
 <br>
+
+# ARGUMENTOS OPCIONAIS
+
+Vamos analisar o código a seguir:
+
+```javascript
+function soma(a, b) {
+  return a + b;
+}
+
+console.log(soma(12, 12, true, "soma"));
+// -> 24
+```
+
+A função `soma` foi definida com dois parâmetros. Quando chamamos a função passamos 4 parâmetros e mesmo assim o JavaScript não reclama. O JavaScript é capaz de compreender a quantidade de parâmetros que uma função necessita e ignora todo o resto. No caso, temos o resultado `24`, pois os valores `true` e `"soma"` que foram passados por parâmetros foram ignorados.
+
+Caso você passe menos parâmetros do que o necessário, o JavaScript retornará o valor `undefined`. Utilizando o exemplo anterior, caso tivéssemos passado:
+
+```javascript
+console.log(soma(12));
+// -> NaN
+```
+
+O valor `NaN` (Not a Number) é retornado pois o cálculo executado foi `12 + undefined`, consequente da falta de um dos argumentos durante a chamada da função.
+
+O resultado `undefined` pode também ser utilizado para manipular o código. Um exemplo é:
+
+```javascript
+function menos(a, b) {
+  if (b === undefined) return -a;
+  else return a - b;
+}
+
+console.log(menos(10));
+// -> -10
+console.log(menos(10, 5));
+// -> 5
+```
+
+Esse comportamento acontece porque na primeira chamada da função, omitimos um dos argumentos, logo o valor `b` tornou-se undefined e passou no teste lógico `b === undefined`.  
+
+A chamada a seguir não omitimos nenhum valor dos argumentos e então durante o teste lógica da estrutura de repetição entramos no `else`, retornando `a - b`. 
+
+
 
 <div align="center">
 
