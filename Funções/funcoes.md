@@ -300,6 +300,21 @@ Esse comportamento acontece porque na primeira chamada da função, omitimos um 
 A chamada a seguir não omitimos nenhum valor dos argumentos e então durante o teste lógica da estrutura de repetição entramos no `else`, retornando `a - b`. 
 
 
+<br>
+<br>
+
+# FUNÇÕES E EFEITOS COLATERAIS
+As funções são definidas naquelas que são invocadas para produzir um efeito colateral ou simplesmente retornar alguma valor. São chamadas de funções _puras_ e _impuras_...
+
+As funções puras são aquelas que são chamadas e produzem algum tipo de valor mas não gera os _efeitos colaterais_ — uma função, por exemplo, que não utiliza variáveis globais que pode alterar outros códigos; tem característica de ser sempre chamada com os mesmo argumentos e isso a torna uma função. Em poucas palavras: _A função pura é aquela que não produz nenhum efeito colateral pois não muda qualquer estado na aplicação_.
+
+As funções que não são consideradas puras podem retornar diferentes valores diferentes dependendo baseado em tipos de fatores e produzem efeitos colaterais que podem fazer co que seja mais complicado realizar testes por cima dela.
+
+<br>
+<br>
+
+
+
 
 <div align="center">
 
