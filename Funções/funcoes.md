@@ -14,6 +14,12 @@
 
 - [O que são funções?](#o-que-são-funções)
 - [Definindo uma função](#definindo-uma-função)
+- [Parâmetros e escopo](#parâmetros-e-escopo)
+- [Escopo aninhado](#escopo-aninhado)
+- [Notação por declaração](#notação-por-declaração)
+- [Arrow functions](#arrow-functions)
+- [Pilha de chamadas](#pilha-de-chamadas)
+- [Argumentos opcionais](#argumentos-opcionais)
 
 Funções são blocos fundamentais; Funções é um conjunto de instrução que executa um processamento e executa um conjunto de instruções. Podemos, por exemplo, criarmos uma função que calcula a média de uma turma e nos retorna um resultado.
 
@@ -155,20 +161,158 @@ O código anterior a função `ingrediente` pode ver o parâmetro `fator` da fun
 
 O conjunto de ligações visíveis dentro de um bloco é determinado pelo lugar desse bloco no texto do programa. Cada escopo local também pode ver todos os escopos locais que o contêm e todos os escopos podem ver o escopo global. Essa abordagem para a visibilidade de vinculação é chamada de _escopo léxico_.
 
-
 <br>
 <br>
 
 # NOTAÇÃO POR DECLARAÇÃO
+
 Existe uma maneira mais simples de definir uma função no JavaScript. Em vez declarar: `var quadrado = function...`. A palavra-chave `function` também pode ser utilizada no início da declaração...
 
-~~~JavaScript
+```JavaScript
 function quadrado(x){
     return x * x;
 }
-~~~
+```
 
-Definimos a variável `quadrado` e fazemos com que ela referêncie a função em questão, entretanto, é importante ressaltar que existe uma pequena diferença entre essas declarações. Quando declaramos uma função dessa forma, 
+Definimos a variável `quadrado` e fazemos com que ela referêncie a função em questão, entretanto, é importante ressaltar que existe uma pequena diferença entre essas declarações. Quando declaramos uma função dessa forma,
+
+<br>
+
+# ARROW FUNCTIONS
+
+Uma outra forma de declararmos funções é a _arrow function_. A _arrow function_ é declarada de forma diferente. Em vez de usarmos a palavra `function`, utilizamos uma flecha `=>` feito com o _sinal de igual_ `=` e _maior que_ `>`.
+
+```javascript
+const poder = (base, expoente) => {
+  let resultado = 1;
+  for (let contador = 0; contador < expoente; countador++) {
+    resultado *= base;
+  }
+  return resultado;
+};
+```
+
+Nas arrow functions, a flecha vem depois dos parâmetros seguindo do bloco da função: `() => {}`
+
+Quando existe somente um parâmetro, o parêntese pode ser omitido. Caso o conteúdo dentro do corpo da função seja uma expressão sozinha em vez de envolver o bloco em chaves, você pode escrever somente a expressão sem necessidade do `return`.
+
+```javascript
+const retangulo1 = (x) => {
+  return x * x;
+};
+const retangulo2 = (x) => x * x;
+```
+
+Quando estamos definindo uma _arrow function_ e não queremos nenhum parâmetro, basta declarar a função com o parêntese vazio, como no exemplo abaixo:
+
+```javascript
+const elefante = () => {
+  console.log("Elefante tem tombra!");
+};
+```
+
+<br>
+<br>
+
+# PILHA DE CHAMADAS
+
+É importante entedermos como funciona o fluxo de controle flui por meio das execuções das funções. Veremos abaixo um simples programa realizando algumas chamadas de funções:
+
+```javascript
+function diaAtual(dia){
+  console.log(`Hoje é:` ${dia});
+}
+diaAtual("Segunda-feira");
+console.log("Tenha um bom dia!");
+```
+
+A função anterior funciona dessa forma:
+
+- A chamada da função `diaAtual` faz com que o controle pule para o início dessa função (linha 1);
+- Após a chamada da função `diaAtual`, é invocado o `console.log`, que assume o controle e faz o seu trabalho;
+- O controle chega ao fim da função `diaAtual` e retorna para o local onde a função foi invocada originalmente (linha 3);
+- Por fim, finalmente o controle executa o `console.log("Tenha um bom dia!)`
+
+<br>
+
+###### Abaixo teremos um exemplo retirado do livro Eloquente JavaScript traduzido em português retirados do GitHub - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
+
+> Devido ao fato de que a função deve retornar ao local onde foi chamada após finalizar a sua execução, o computador precisa se lembrar do contexto no qual a função foi invocada originalmente. Em um dos casos, console.log retorna o controle para a função greet. No outro caso, ela retorna para o final do programa.
+>
+> O local onde o computador armazena esse contexto é chamado de call stack (pilha de chamadas). Toda vez que uma função é invocada, o contexto atual é colocado no topo dessa "pilha" de contextos. Quando a função finaliza sua execução, o contexto no topo da pilha é removido e utilizado para continuar o fluxo de execução.
+>
+> O armazenamento dessa pilha de contextos necessita de espaço na memória do computador. Quando a pilha começar a ficar muito grande, o computador reclamará com uma mensagem do tipo out of stack space (sem espaço na pilha) ou too much recursion (muitas recursões). O código a seguir demonstra esse problema fazendo uma pergunta muito difícil para o computador, que resultará em um ciclo infinito de chamadas entre duas funções. Se o computador tivesse uma pilha de tamanho infinito, isso poderia ser possível, no entanto, eventualmente chegaremos ao limite de espaço e explodiremos a "pilha".
+
+```javascript
+function chicken() {
+  return egg();
+}
+function egg() {
+  return chicken();
+}
+console.log(chicken() + " came first.");
+// → ??
+```
+
+<br>
+<br>
+
+# ARGUMENTOS OPCIONAIS
+
+Vamos analisar o código a seguir:
+
+```javascript
+function soma(a, b) {
+  return a + b;
+}
+
+console.log(soma(12, 12, true, "soma"));
+// -> 24
+```
+
+A função `soma` foi definida com dois parâmetros. Quando chamamos a função passamos 4 parâmetros e mesmo assim o JavaScript não reclama. O JavaScript é capaz de compreender a quantidade de parâmetros que uma função necessita e ignora todo o resto. No caso, temos o resultado `24`, pois os valores `true` e `"soma"` que foram passados por parâmetros foram ignorados.
+
+Caso você passe menos parâmetros do que o necessário, o JavaScript retornará o valor `undefined`. Utilizando o exemplo anterior, caso tivéssemos passado:
+
+```javascript
+console.log(soma(12));
+// -> NaN
+```
+
+O valor `NaN` (Not a Number) é retornado pois o cálculo executado foi `12 + undefined`, consequente da falta de um dos argumentos durante a chamada da função.
+
+O resultado `undefined` pode também ser utilizado para manipular o código. Um exemplo é:
+
+```javascript
+function menos(a, b) {
+  if (b === undefined) return -a;
+  else return a - b;
+}
+
+console.log(menos(10));
+// -> -10
+console.log(menos(10, 5));
+// -> 5
+```
+
+Esse comportamento acontece porque na primeira chamada da função, omitimos um dos argumentos, logo o valor `b` tornou-se undefined e passou no teste lógico `b === undefined`.  
+
+A chamada a seguir não omitimos nenhum valor dos argumentos e então durante o teste lógica da estrutura de repetição entramos no `else`, retornando `a - b`. 
+
+
+<br>
+<br>
+
+# FUNÇÕES E EFEITOS COLATERAIS
+As funções são definidas naquelas que são invocadas para produzir um efeito colateral ou simplesmente retornar alguma valor. São chamadas de funções _puras_ e _impuras_...
+
+As funções puras são aquelas que são chamadas e produzem algum tipo de valor mas não gera os _efeitos colaterais_ — uma função, por exemplo, que não utiliza variáveis globais que pode alterar outros códigos; tem característica de ser sempre chamada com os mesmo argumentos e isso a torna uma função. Em poucas palavras: _A função pura é aquela que não produz nenhum efeito colateral pois não muda qualquer estado na aplicação_.
+
+As funções que não são consideradas puras podem retornar diferentes valores diferentes dependendo baseado em tipos de fatores e produzem efeitos colaterais que podem fazer co que seja mais complicado realizar testes por cima dela.
+
+<br>
+<br>
+
 
 <br/>
 <br/>
