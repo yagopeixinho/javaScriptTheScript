@@ -170,6 +170,16 @@ function quadrado(x){
 
 Definimos a variável `quadrado` e fazemos com que ela referêncie a função em questão, entretanto, é importante ressaltar que existe uma pequena diferença entre essas declarações. Quando declaramos uma função dessa forma, 
 
+<br/>
+<br/>
+
+# FUNÇÕES CRESCENTES
+Percebemos que precisamos de uma função em um programa quando estamos escrevendo o mesmo código várias vezes. Quanto mais linhas de códigos temos, mais chances são os erros e mais ilegível o código se torna para os programadores que vão ler. Desse modo, escolhemos um bom nome e determinamos uma função para determinada funcionalidade.
+
+Outro motivo que normalmente precisamos de uma funcionalidade que ainda não foi escrita e por algum motivo precisa ser encapsulada em uma função própria. 
+
+<br/>
+<br/>
 
 
 <div align="center">
