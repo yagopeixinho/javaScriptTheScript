@@ -310,6 +310,10 @@ As funções puras são aquelas que são chamadas e produzem algum tipo de valor
 
 As funções que não são consideradas puras podem retornar diferentes valores diferentes dependendo baseado em tipos de fatores e produzem efeitos colaterais que podem fazer co que seja mais complicado realizar testes por cima dela.
 
+
+
+
+
 <br>
 <br>
 
