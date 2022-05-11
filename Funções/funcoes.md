@@ -322,6 +322,82 @@ Percebemos que precisamos de uma função em um programa quando estamos escreven
 
 Outro motivo que normalmente precisamos de uma funcionalidade que ainda não foi escrita e por algum motivo precisa ser encapsulada em uma função própria. 
 
+###### Abaixo teremos um exemplo retirado do livro Eloquente JavaScript traduzido em português retirados do GitHub - repositório eloquente-javascript. Para ver essas informações [clique aqui](https://github.com/braziljs/eloquente-javascript/blob/master/chapters/02-estrutura-do-programa.md).
+
+> A dificuldade de encontrar um bom nome para uma função é um bom indicativo de quão claro é o conceito que você está tentando encapsular. Vamos analisar um exemplo.
+
+> Nós queremos escrever um programa que imprima dois números, sendo eles o número de vacas e galinhas em uma fazenda com as palavras Cows (vacas) e Chickens (galinhas) depois deles e algarismos zeros antes de ambos os números para que sejam sempre números de três dígitos.
+
+> 007 Cows
+>
+> 011 Chickens
+
+> Bom, claramente, isso é uma função que exige dois argumentos. Vamos codar.
+
+~~~javascript
+function printFarmInventory(cows, chickens) {
+  var cowString = String(cows);
+  while (cowString.length < 3)
+    cowString = “0” + cowString;
+  console.log(cowString + “ Cows”);
+  var chickenString = String(chickens);
+  while (chickenString.length < 3)
+    chickenString = “0” + chickenString;
+  console.log(chickenString + “ Chickens”);
+}
+printFarmInventory(7, 11);
+~~~
+
+> Adicionar .length após o valor de uma string nos fornecerá o tamanho (quantidade de caracteres) daquela string. Por isso, o laço de repetição while continua adicionando zeros no início da string que representa o número até que a mesma tenha três caracteres.
+
+> Missão cumprida! Porém, no momento em que iríamos enviar o código ao fazendeiro (juntamente com uma grande cobrança, é claro), ele nos ligou dizendo que começou a criar porcos, e perguntou, se poderíamos estender a funcionalidade do software para também imprimir os porcos?
+
+> É claro que podemos. Antes de entrar no processo de copiar e colar essas mesmas quatro linhas outra vez, vamos parar e reconsiderar. Deve existir uma forma melhor. Aqui está a primeira tentativa:
+
+~~~javascript
+function printZeroPaddedWithLabel(number, label) {
+  var numberString = String(number);
+  while (numberString.length < 3)
+    numberString = “0” + numberString;
+  console.log(numberString + “ “ + label);
+}
+
+function printFarmInventory(cows, chickens, pigs) {
+  printZeroPaddedWithLabel(cows, “Cows”);
+  printZeroPaddedWithLabel(chickens, “Chickens”);
+  printZeroPaddedWithLabel(pigs, “Pigs”);
+}
+
+printFarmInventory(7, 11, 3);
+~~~
+
+> Funcionou! Mas o nome printZeroPaddedWithLabel é um pouco estranho. Ele é uma combinação de três coisas - imprimir, adicionar zeros e adicionar a label correta - em uma única função.
+
+> Ao invés de tentarmos abstrair a parte repetida do nosso programa como um todo, vamos tentar selecionar apenas um conceito.
+
+~~~javascript
+function zeroPad(number, width) {
+  var string = String(number);
+  while (string.length < width)
+    string = “0” + string;
+  return string;
+}
+
+function printFarmInventory(cows, chickens, pigs) {
+  console.log(zeroPad(cows, 3) + “ Cows”);
+  console.log(zeroPad(chickens, 3) + “ Chickens”);
+  console.log(zeroPad(pigs, 3) + “ Pigs”);
+}
+
+printFarmInventory(7, 16, 3);
+~~~
+
+> Ter uma função com um bom nome descritivo como zeroPad torna fácil para qualquer um ler e entender o código. Além disso, ele pode ser útil em outras situações, além desse programa específico. Você pode usá-lo, por exemplo, para imprimir números corretamente alinhados em uma tabela.
+
+> O quão inteligente e versátil as nossas funções deveriam ser? Nós poderíamos escrever funções extremamente simples, que apenas adicionam algarismos para que o número tenha três caracteres, até funções complicadas, para formatação de números fracionários, números negativos, alinhamento de casas decimais, formatação com diferentes caracteres e por aí vai.
+
+> Um princípio útil é não adicionar funcionalidades, a menos que você tenha certeza absoluta de que irá precisar delas. Pode ser tentador escrever soluções genéricas para cada funcionalidade com que você se deparar. Resista a essa vontade. Você não vai ganhar nenhum valor real com isso e vai acabar escrevendo muitas linhas de código que nunca serão usadas.
+> 
 <br/>
 <br/>
 
