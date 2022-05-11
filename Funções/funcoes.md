@@ -20,6 +20,8 @@
 - [Arrow functions](#arrow-functions)
 - [Pilha de chamadas](#pilha-de-chamadas)
 - [Argumentos opcionais](#argumentos-opcionais)
+- [Funções e efeitos colaterais](#funções-e-efeitos-colaterais)
+- [Funções crescentes](#funções-crescentes)
 
 Funções são blocos fundamentais; Funções é um conjunto de instrução que executa um processamento e executa um conjunto de instruções. Podemos, por exemplo, criarmos uma função que calcula a média de uma turma e nos retorna um resultado.
 
