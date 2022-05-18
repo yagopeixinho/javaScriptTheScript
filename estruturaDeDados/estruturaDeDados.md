@@ -13,7 +13,7 @@
 # ESTRUTURA DE DADOS
 - [Sumário](#teste)
 
-Um texto a respeito do conteúdo
+Texto alinhado de exemplo para teste de commit
 
 <br>
 <br>
