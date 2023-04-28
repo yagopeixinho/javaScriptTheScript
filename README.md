@@ -9,7 +9,7 @@
 
 <div align="center">
 
-**JavaScript Script** é um roteiro de estudo da linguagem de programação JavaScript recomendado para todos os níveis de programadores.
+**JavaScript The Script** é um roteiro de estudo da linguagem de programação JavaScript recomendado para todos os níveis de programadores.
 
 <br>
 </div>
